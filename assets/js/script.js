@@ -9,7 +9,7 @@ $(".btn-level").click(function(){
     $(".game-window").addClass("d-block")
     $("#playWindow").modal("hide")
     var amount = $(this).attr("difficulty")
-    ShowCards(amount)
+    showCards(amount)
     startTimer()
 })
 

@@ -13,7 +13,7 @@ function getCards(cardAmount, writeCards) {
     xhr.send();
 }
 
-function ShowCards(cardAmount) {
+function showCards(cardAmount) {
     console.log("show cards")
     var el = document.getElementById("cards");
     el.innerHTML = "";
@@ -23,9 +23,10 @@ function ShowCards(cardAmount) {
         console.log(data)
         
         data.forEach(function(item) {
-            el.innerHTML += item + " ";
+            el.innerHTML +="<img src=\""+ item + "\" width=\"150\", height=\"150\">";
         });
-        
+        data.forEach(function(item) {
+            el.innerHTML +="<img src=\""+ item + "\" width=\"150\", height=\"150\">";
+        });
     });
 }
-
