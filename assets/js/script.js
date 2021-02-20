@@ -8,9 +8,9 @@ $(".btn-level").click(function(){
     $(".game-window").removeClass("d-none")
     $(".game-window").addClass("d-block")
     $("#playWindow").modal("hide")
-    timerCycle()
-    ShowCards(6)
-
+    var amount = $(this).attr("difficulty")
+    ShowCards(amount)
+    startTimer()
 })
 
 $(".btn-restart").click(function(){
@@ -30,6 +30,12 @@ var min = 0;
 var sec = 0;
 var stoptime = true;
 
+function startTimer() {
+  if (stoptime == true) {
+        stoptime = false;
+        timerCycle();
+    }
+}
 
 function stopTimer() {
   if (stoptime == false) {
