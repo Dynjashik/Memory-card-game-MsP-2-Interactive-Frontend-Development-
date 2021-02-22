@@ -22,11 +22,15 @@ function showCards(cardAmount) {
         data = data.message;
         console.log(data)
         
+        var backCard = "<span><img src=\"assets/images/dog-logo.png\" width=\"150\", height=\"150\"></span>"
+
         data.forEach(function(item) {
-            el.innerHTML +="<img src=\""+ item + "\" width=\"150\", height=\"150\">";
+            var frontCard = "<span hidden><img src=\""+ item + "\" width=\"150\", height=\"150\"></span>"
+            el.innerHTML += backCard + frontCard;
         });
         data.forEach(function(item) {
-            el.innerHTML +="<img src=\""+ item + "\" width=\"150\", height=\"150\">";
+            var frontCard = "<span hidden><img src=\""+ item + "\" width=\"150\", height=\"150\"></span>"
+            el.innerHTML += backCard + frontCard;
         });
     });
 }
