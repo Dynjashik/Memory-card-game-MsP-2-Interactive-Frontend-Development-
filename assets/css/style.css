@@ -1,0 +1,10 @@
+
+/*Styling game cards*/
+
+.front-side.card-side{
+    display: none;
+}
+.card-side {
+    display: inline-block;
+}
+

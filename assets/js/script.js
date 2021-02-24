@@ -23,6 +23,16 @@ $(".btn-restart").click(function(){
     stopTimer()
 })
 
+/*Flipping game cards*/
+
+$(".card").on('click','.back-side', function() {
+    console.log("flip card")
+    $(this).hide();
+    $(this).next(".front-side").css("display", "inline-block");
+});
+
+
+
 /*Timer and steps in the game */
 const timer = document.getElementById('timerStart');
 

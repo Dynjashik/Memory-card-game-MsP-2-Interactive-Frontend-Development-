@@ -22,14 +22,14 @@ function showCards(cardAmount) {
         data = data.message;
         console.log(data)
         
-        var backCard = "<span><img src=\"assets/images/dog-logo.png\" width=\"150\", height=\"150\"></span>"
+        var backCard = "<div class = \"back-side card-side\"><img src=\"assets/images/dog-logo.png\" width=\"150\", height=\"150\"></div>"
 
         data.forEach(function(item) {
-            var frontCard = "<span hidden><img src=\""+ item + "\" width=\"150\", height=\"150\"></span>"
+            var frontCard = "<div class = \"front-side card-side \" ><img src=\""+ item + "\" width=\"150\", height=\"150\"></div>"
             el.innerHTML += backCard + frontCard;
         });
         data.forEach(function(item) {
-            var frontCard = "<span hidden><img src=\""+ item + "\" width=\"150\", height=\"150\"></span>"
+            var frontCard = "<div class = \"front-side card-side \"><img src=\""+ item + "\" width=\"150\", height=\"150\"></div>"
             el.innerHTML += backCard + frontCard;
         });
     });
