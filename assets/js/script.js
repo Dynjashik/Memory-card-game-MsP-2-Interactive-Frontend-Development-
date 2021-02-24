@@ -25,10 +25,24 @@ $(".btn-restart").click(function(){
 
 /*Flipping game cards*/
 
+var openedCardCount = 0
+
 $(".card").on('click','.back-side', function() {
     console.log("flip card")
     $(this).hide();
     $(this).next(".front-side").css("display", "inline-block");
+    openedCardCount=openedCardCount+1
+    console.log(openedCardCount)
+
+    if (openedCardCount == 2) {
+        setTimeout(function () {
+            $(".back-side").show();
+            $(".front-side").hide();
+            openedCardCount = 0
+            console.log("toggle cards")
+        }, 1500);
+
+    }
 });
 
 
