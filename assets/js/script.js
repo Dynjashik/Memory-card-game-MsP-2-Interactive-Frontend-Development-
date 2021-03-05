@@ -26,28 +26,50 @@ $(".btn-restart").click(function(){
 /*Flipping game cards*/
 
 var openedCardCount = 0
+var openedCards = []
+var amountFlips = 0
 
 $(".card").on('click','.back-side', function() {
-    console.log("flip card")
-    $(this).hide();
-    $(this).next(".front-side").css("display", "inline-block");
-    openedCardCount=openedCardCount+1
-    console.log(openedCardCount)
+    amountFlips = amountFlips+1 
+    const steps = document.getElementById('steps')
+    steps.innerHTML = amountFlips
+    console.log("Flips:"+amountFlips) 
 
-    if (openedCardCount == 2) {
-        setTimeout(function () {
-            $(".back-side").show();
-            $(".front-side").hide();
+    if (openedCardCount<2) {
+        $(this).hide();
+        $(this).next(".front-side").css("display", "inline-block").addClass("visible");
+        openedCardCount=openedCardCount+1
+
+        selectedImageURL = $(this).next(".front-side").find("img").attr("src")
+        openedCards.push(selectedImageURL)
+
+        console.log(openedCards)
+
+        if (openedCardCount == 2) {
+            if(openedCards[0] != openedCards[1]) {
+               setTimeout(function () {
+                $(".back-side").show();
+                $(".front-side").not('.matched').hide().removeClass("visible");
+                console.log("COMPARE CARDS")
+                }, 1000);  
+            }  else if (openedCards[0] == openedCards[1]) {
+               $(".visible").addClass("matched")
+               $(".matched").prev(".back-side").removeClass("back-side")
+                console.log("matchedCards")
+            } 
             openedCardCount = 0
-            console.log("toggle cards")
-        }, 1500);
-
+            openedCards = []
+        }
     }
+
+/*Finishing the game*/
+
+
+
 });
 
 
-
-/*Timer and steps in the game */
+/*Timer in the game */
 const timer = document.getElementById('timerStart');
 
 var min = 0;
@@ -93,3 +115,4 @@ function timerCycle() {
     setTimeout("timerCycle()", 1000);
   }
 }
+
