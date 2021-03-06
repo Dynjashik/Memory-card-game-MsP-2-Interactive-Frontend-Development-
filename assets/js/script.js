@@ -1,4 +1,11 @@
 
+var openedCardCount = 0
+var openedCards = []
+var amountFlips = 0
+
+const steps = document.getElementById('steps')
+steps.innerHTML = amountFlips
+
 /*Clicking level buttons*/
 
 $(".btn-level").click(function(){
@@ -11,6 +18,8 @@ $(".btn-level").click(function(){
     var amount = $(this).attr("difficulty")
     showCards(amount)
     startTimer()
+    amountFlips = 0
+    steps.innerHTML = amountFlips
 })
 
 $(".btn-restart").click(function(){
@@ -25,13 +34,10 @@ $(".btn-restart").click(function(){
 
 /*Flipping game cards*/
 
-var openedCardCount = 0
-var openedCards = []
-var amountFlips = 0
 
 $(".card").on('click','.back-side', function() {
+    $(this).hide();
     amountFlips = amountFlips+1 
-    const steps = document.getElementById('steps')
     steps.innerHTML = amountFlips
     console.log("Flips:"+amountFlips) 
 
@@ -43,7 +49,7 @@ $(".card").on('click','.back-side', function() {
         selectedImageURL = $(this).next(".front-side").find("img").attr("src")
         openedCards.push(selectedImageURL)
 
-        console.log(openedCards)
+        console.log(openedCards,openedCardCount)
 
         if (openedCardCount == 2) {
             if(openedCards[0] != openedCards[1]) {
