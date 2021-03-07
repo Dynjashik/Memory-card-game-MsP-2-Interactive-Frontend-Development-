@@ -2,6 +2,7 @@
 var openedCardCount = 0
 var openedCards = []
 var amountFlips = 0
+var amount = 0
 
 const steps = document.getElementById('steps')
 steps.innerHTML = amountFlips
@@ -15,7 +16,7 @@ $(".btn-level").click(function(){
     $(".game-window").removeClass("d-none")
     $(".game-window").addClass("d-block")
     $("#playWindow").modal("hide")
-    var amount = $(this).attr("difficulty")
+    amount = $(this).attr("difficulty")
     showCards(amount)
     startTimer()
     amountFlips = 0
@@ -36,10 +37,8 @@ $(".btn-restart").click(function(){
 
 
 $(".card").on('click','.back-side', function() {
-    $(this).hide();
     amountFlips = amountFlips+1 
-    steps.innerHTML = amountFlips
-    console.log("Flips:"+amountFlips) 
+    steps.innerHTML = amountFlips 
 
     if (openedCardCount<2) {
         $(this).hide();
@@ -57,20 +56,32 @@ $(".card").on('click','.back-side', function() {
                 $(".back-side").show();
                 $(".front-side").not('.matched').hide().removeClass("visible");
                 console.log("COMPARE CARDS")
-                }, 1000);  
+                openedCardCount = 0
+                }, 1000);
             }  else if (openedCards[0] == openedCards[1]) {
                $(".visible").addClass("matched")
                $(".matched").prev(".back-side").removeClass("back-side")
                 console.log("matchedCards")
-            } 
-            openedCardCount = 0
+                openedCardCount = 0
+
+                  var numItems = $('.matched').length
+                  if (numItems == amount*2) {
+                      console.log("endGame")
+                        $("#gameEnd").modal("show")
+                  }
+                  console.log("numItems: "+numItems + "  amount: " + amount)
+            }
             openedCards = []
         }
     }
 
-/*Finishing the game*/
+/*Finishing the game
 
-
+if(numItems == amount) {
+    console.log("Victory")
+   $(".menu-page").removeClass("d-none")
+    $(".menu-page").addClass("d-block") 
+}*/
 
 });
 

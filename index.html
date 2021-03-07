@@ -37,7 +37,7 @@
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-        <button type="button" id="btn-easy" class="btn-level" difficulty=6>EASY</button>
+        <button type="button" id="btn-easy" class="btn-level" difficulty=4>EASY</button>
         <button type="button" id="btn-medium" class="btn-level" difficulty=8>MEDIUM</button>
         <button type="button" id="btn-hard" class="btn-level" difficulty=10>HARD</button>
       </div>
@@ -102,6 +102,43 @@
     </div> 
     <button type="button" class="btn-restart"> RESTART</button>             
 </div>
+
+<div class="modal fade" id="descriptionWindow" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="descriptionWindowLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="descriptionWindowLabel">How to play</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">OK</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--THE END OF THE GAME-->
+<div class="modal fade" id="gameEnd" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="gameEndLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="gameEndLabel">Victory!</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+          Congratulations!! <br>
+          You managed the game...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">OK</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
 
 </body>
 
