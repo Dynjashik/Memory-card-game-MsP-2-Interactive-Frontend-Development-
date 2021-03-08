@@ -15,17 +15,17 @@
  <!--Main page with menu-->    
  <div>
      <header>
-         <h1>MATCH A DOG</h1>
+         <h1 class="nameGame">MATCH A DOG</h1>
     </header>
    <!--Menu--> 
    <div class="menu-page d-block">
-    <div><img src="" alt="dog"></div>
+    <div class="dog-logo"><img src="assets/images/dog-logo-black.png" alt="dog"></div>
      <!--Button trigger modal (bootstrap)--> 
     <div>
 <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#playWindow">Play</button>
 </div>
-<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#descriptionWindow">How to play</button>
-<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#aboutWindow">About</button>
+<div><button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#descriptionWindow">How to play</button></div>
+<div><button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#aboutWindow">About</button></div>
 
 <!--PLAY BUTTON-->
 
@@ -37,7 +37,7 @@
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-        <button type="button" id="btn-easy" class="btn-level" difficulty=4>EASY</button>
+        <button type="button" id="btn-easy" class="btn-level" difficulty=2>EASY</button>
         <button type="button" id="btn-medium" class="btn-level" difficulty=8>MEDIUM</button>
         <button type="button" id="btn-hard" class="btn-level" difficulty=10>HARD</button>
       </div>
@@ -129,7 +129,7 @@
       </div>
       <div class="modal-body">
           Congratulations!! <br>
-          You managed the game...
+          You managed the game in <span id="timeAmount"></span> and in <span id="stepsAmount"></span>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">OK</button>

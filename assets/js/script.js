@@ -63,25 +63,21 @@ $(".card").on('click','.back-side', function() {
                $(".matched").prev(".back-side").removeClass("back-side")
                 console.log("matchedCards")
                 openedCardCount = 0
-
+               
+/*Open window with the end*/
                   var numItems = $('.matched').length
                   if (numItems == amount*2) {
                       console.log("endGame")
                         $("#gameEnd").modal("show")
+                        stopTimer()
                   }
                   console.log("numItems: "+numItems + "  amount: " + amount)
+                  timeAmount.innerHTML = min +" minutes " + sec + " seconds ";
+                  stepsAmount.innerHTML = amountFlips + " steps";
             }
             openedCards = []
         }
     }
-
-/*Finishing the game
-
-if(numItems == amount) {
-    console.log("Victory")
-   $(".menu-page").removeClass("d-none")
-    $(".menu-page").addClass("d-block") 
-}*/
 
 });
 
