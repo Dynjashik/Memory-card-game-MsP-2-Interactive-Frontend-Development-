@@ -31,10 +31,18 @@ function showCards(cardAmount) {
             imagesArray.push(frontCard)
         });
 
+
         imagesArray = shuffle(imagesArray)
-        console.log("!! " + imagesArray)
+
+        var row = ""
         for (i in imagesArray) {
-            el.innerHTML += backCard + imagesArray[i]
+           row += backCard + imagesArray[i]
+           var row_counter = parseInt(i)+1
+           if (row_counter%4 == 0) {
+                el.innerHTML += "<div>" + row + "</div>"
+                console.log(row)
+                row = ""
+            }
         }
 
     }); 
