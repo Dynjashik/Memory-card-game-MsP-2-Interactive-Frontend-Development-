@@ -66,11 +66,11 @@
   <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="playWindowLabel">Choose your difficulty level</h5>
+        <h5 class="modal-title" id="playWindowLabel">Choose your difficulty level: </h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-        <button type="button" id="btn-easy" class="btn-level" difficulty=2>EASY</button>
+        <button type="button" id="btn-easy" class="btn-level" difficulty=6>EASY</button>
         <button type="button" id="btn-medium" class="btn-level" difficulty=8>MEDIUM</button>
         <button type="button" id="btn-hard" class="btn-level" difficulty=10>HARD</button>
       </div>
@@ -125,8 +125,7 @@
 
 <div class="game-window d-none">
     <div class="d-inline-block score mt-2 mr-2">
-        <p id="timerStart"> Timer </p>
-         <p> Steps: <span id="steps">0</span> </p>  
+        <p> <span id="timerStart"> </span>&nbsp;&nbsp;&nbsp; <span id="steps"></span> </p>  
     </div>
     <div class="container-fluid">
         <div class="d-flex">

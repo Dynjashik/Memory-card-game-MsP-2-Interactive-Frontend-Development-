@@ -19,16 +19,49 @@ height: 90px;
 
 /*Styling menu*/
 
-
-/*.dog-logo {
-    margin: 50px 0 50px 0;
-}*/
-
-.btn {
+.btn-primary {
     margin: 5px 5px 5px 5px;
     padding: 0.375rem 1.75rem;
     font-size: 2rem;
     border-radius: 1.25rem;
+    background-color: #6E64F0;
+    border-color: #6E64F0;
+}
+.btn-primary:hover, .btn-level:hover{
+    background-color: #3139bc;
+    border-color: #3139bc;
+}
+.modal-content {
+    height:270px;
+    background-color: #ffe16e;
+    border: 1px solid rgba(0,0,0,.2);
+    border-radius: 1.3rem;
+}
+h5 {
+    font-size: 2rem;
+}
+.btn-close {
+    color: #3139bc;
+}
+.btn-level, .btn-restart{
+  margin: 5px 5px 5px 5px;
+    padding: 0.375rem 1.75rem;
+    font-size: 1.5rem;
+    border-radius: 1.25rem;
+    background-color: #6E64F0;
+    border-color: #6E64F0;
+    color: white; 
+}
+
+/*Styling game window*/
+
+#timerStart, #steps {
+margin: 5px 5px 5px 5px;
+    padding: 0.375rem 1.75rem;
+    font-size: 1.5rem;
+    border-radius: 0.25rem;
+    background-color: #a492ff;
+    color: black;
 }
 
 
@@ -41,3 +74,11 @@ height: 90px;
     display: inline-block;
 }
 
+.card {
+    background-color: #ffe16e;
+    border: #ffe16e; 
+}
+img {
+ border: 1px solid rgba(0,0,0,.2);
+ border-radius: 1.3rem;    
+}

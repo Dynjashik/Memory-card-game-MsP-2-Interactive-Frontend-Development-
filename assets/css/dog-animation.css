@@ -4,7 +4,8 @@
 	 width: 100px;
 	 height: 100px;
      z-index: 1;
-     margin: 90px auto 25px auto;
+    margin: 95px auto 25px auto;
+     
 }
  .dog:before {
 	 content: '';

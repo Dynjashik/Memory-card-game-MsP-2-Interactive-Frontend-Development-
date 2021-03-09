@@ -5,7 +5,6 @@ var amountFlips = 0
 var amount = 0
 
 const steps = document.getElementById('steps')
-steps.innerHTML = amountFlips
 
 /*Clicking level buttons*/
 
@@ -20,7 +19,7 @@ $(".btn-level").click(function(){
     showCards(amount)
     startTimer()
     amountFlips = 0
-    steps.innerHTML = amountFlips
+    steps.innerHTML = " Steps: " + amountFlips
 })
 
 $(".btn-restart").click(function(){
@@ -38,7 +37,7 @@ $(".btn-restart").click(function(){
 
 $(".card").on('click','.back-side', function() {
     amountFlips = amountFlips+1 
-    steps.innerHTML = amountFlips 
+    steps.innerHTML = " Steps: " + amountFlips 
 
     if (openedCardCount<2) {
         $(this).hide();
