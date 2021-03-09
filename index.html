@@ -6,7 +6,8 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.1.1/css/hover-min.css" type="text/css" />
-        <link rel="stylesheet" href="assets/css/style.css"/>   
+        <link rel="stylesheet" href="assets/css/style.css"/>
+         <link rel="stylesheet" href="assets/css/dog-animation.css"/>  
     <title>Memory card game</title>
 </head>
 
@@ -19,11 +20,43 @@
     </header>
    <!--Menu--> 
    <div class="menu-page d-block">
-    <div class="dog-logo"><img src="assets/images/dog-logo-black.png" alt="dog"></div>
-     <!--Button trigger modal (bootstrap)--> 
-    <div>
-<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#playWindow">Play</button>
+    <!--<div class="dog-logo"><img src="assets/images/dog-logo-black.png" alt="dog"></div>-->
+<div class="dog">
+  <div class="dog-body">
+    <div class="dog-tail">
+      <div class="dog-tail">
+        <div class="dog-tail">
+          <div class="dog-tail">
+            <div class="dog-tail">
+              <div class="dog-tail">
+                <div class="dog-tail">
+                  <div class="dog-tail"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="dog-torso"></div>
+  <div class="dog-head">
+    <div class="dog-ears">
+      <div class="dog-ear"></div>
+      <div class="dog-ear"></div>
+    </div>
+    <div class="dog-eyes">
+      <div class="dog-eye"></div>
+      <div class="dog-eye"></div>
+    </div>
+    <div class="dog-muzzle">
+      <div class="dog-tongue"></div>
+    </div>
+  </div>
 </div>
+
+<!--Button trigger modal (bootstrap)--> 
+<div><button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#playWindow">Play</button></div>
 <div><button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#descriptionWindow">How to play</button></div>
 <div><button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#aboutWindow">About</button></div>
 

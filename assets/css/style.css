@@ -1,18 +1,28 @@
+html, body{
+ justify-content: center;
+     align-items: center;
+     text-align: center;
+   background: #ffe16e;   
+}
+
 /*Styling header*/
+
 .nameGame {
+font-size: 3.5rem;
 position: relative;
 text-align: center;
-margin-top: 2pc;
+padding: 0;
+margin: 0;
+background-color: white;
+height: 90px;
 }
 
 /*Styling menu*/
-.menu-page {
-   text-align: center;
-}
 
-.dog-logo {
+
+/*.dog-logo {
     margin: 50px 0 50px 0;
-}
+}*/
 
 .btn {
     margin: 5px 5px 5px 5px;
@@ -20,6 +30,7 @@ margin-top: 2pc;
     font-size: 2rem;
     border-radius: 1.25rem;
 }
+
 
 /*Styling game cards*/
 
