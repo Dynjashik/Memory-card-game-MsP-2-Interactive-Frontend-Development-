@@ -1,20 +1,19 @@
 html, body{
- justify-content: center;
-     align-items: center;
-     text-align: center;
-   background: #ffe16e;   
+justify-content: center;
+align-items: center;
+text-align: center;
+background: #ffe16e;   
 }
-
+body {
+margin: 0;
+font-family: "Comic Sans MS", "Comic Sans", cursive;
+font-size: 18px;
+}
 /*Styling header*/
 
-.nameGame {
-font-size: 3.5rem;
-position: relative;
-text-align: center;
-padding: 0;
-margin: 0;
-background-color: white;
-height: 90px;
+.navbar, .nameGame {
+font-size: 3rem;
+justify-content: center;
 }
 
 /*Styling menu*/
@@ -32,14 +31,16 @@ height: 90px;
     border-color: #3139bc;
 }
 .modal-content {
-    height:400px;
     background-color: #ffe16e;
-    border: 1px solid rgba(0,0,0,.2);
     border-radius: 1.3rem;
 }
-
 h5 {
-    font-size: 2rem;
+    font-size: 1.75rem;
+}
+.modal-body {
+    margin: auto;
+    padding-top: 0px;
+    min-height: 300px;
 }
 .btn-close {
     color: #3139bc;
@@ -47,8 +48,8 @@ h5 {
 .btn-close:hover {
     color: #6E64F0;
 }
-.btn-level, .btn-restart, .btn-secondary{
-  margin: 5px 5px 5px 5px;
+.btn-level, .btn-restart, .btn-secondary {
+  margin: 20px 5px 5px 5px;
     padding: 0.375rem 1.75rem;
     font-size: 1.5rem;
     border-radius: 1.25rem;
@@ -56,15 +57,20 @@ h5 {
     border-color: #6E64F0;
     color: white; 
 }
+.btn-secondary{
+    font-size: 1rem;
+    border-radius: 1rem;
+}
 
 /*Styling game window*/
 
-#timerStart, #steps {
-margin: 5px 5px 5px 5px;
+.info-window {
+margin: 5px;
     padding: 0.375rem 1.75rem;
     font-size: 1.5rem;
-    border-radius: 0.25rem;
-    background-color: #a492ff;
+     border: 2px solid #6e64f0;
+    border-radius: 1.25rem;
+    background-color: #ffff9f;
     color: black;
 }
 
@@ -84,5 +90,32 @@ margin: 5px 5px 5px 5px;
 }
 img {
  border: 1px solid rgba(0,0,0,.2);
- border-radius: 1.3rem;    
+ border-radius: 1.3rem;
+ max-width: 100%;
 }
+
+/*Styling modal windows*/
+.modal-header{
+    padding: 0px;
+    border-bottom: 0px;
+}
+
+.modal-header .btn-close {
+    padding: 0.5rem 1rem;
+    margin: 0.2rem -.2rem 0rem auto;
+}
+
+.modal-footer{
+    padding: 0 6px 6px 6px;
+    border-top: 0px;
+}
+
+.result-style{
+    background:#ffff9f;
+}
+
+.game-end-modal-header{
+    padding: 10px;
+    margin: auto;
+}
+
