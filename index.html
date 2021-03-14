@@ -7,16 +7,17 @@
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.1.1/css/hover-min.css" type="text/css" />
         <link rel="stylesheet" href="assets/css/style.css"/>
-         <link rel="stylesheet" href="assets/css/dog-animation.css"/>  
+        <link rel="stylesheet" href="assets/css/dogs-animation.css"/>  
     <title>Memory card game</title>
 </head>
 
 <body>
 
  <!--Main page with menu-->    
- <div>
      <header>
-         <h1 class="nameGame">MATCH A DOG</h1>
+         <nav class="navbar navbar-light bg-light">
+            <span class="navbar-brand mb-0 h1 nameGame"><i class="fas fa-paw"></i> MATCH A DOG <i class="fas fa-paw"></i></span>
+        </nav>     
     </header>
    <!--Menu--> 
    <div class="menu-page d-block">
@@ -63,20 +64,17 @@
 <!--PLAY BUTTON-->
 
 <div class="modal fade" id="playWindow" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="playWindowLabel" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+  <div class="modal-dialog modal-dialog-centered modal-sm modal-dialog-scrollable">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="playWindowLabel">Choose your difficulty level: </h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-        <button type="button" id="btn-easy" class="btn-level" difficulty=6>EASY</button>
-        <button type="button" id="btn-medium" class="btn-level" difficulty=8>MEDIUM</button>
-        <button type="button" id="btn-hard" class="btn-level" difficulty=10>HARD</button>
+        <h2>Game difficulty:</h2>
+        <button type="button" id="btn-easy" class="btn-level" difficulty=4>EASY</button>
+        <button type="button" id="btn-medium" class="btn-level" difficulty=6>MEDIUM</button>
+        <button type="button" id="btn-hard" class="btn-level" difficulty=8>HARD</button>
       </div>
-     <!-- <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">OK</button>
-      </div>-->
     </div>
   </div>
 </div>
@@ -87,10 +85,10 @@
   <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="descriptionWindowLabel">How to play</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
+        <h2>How to play</h2> <br>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">OK</button>
@@ -105,14 +103,11 @@
   <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="aboutWindowLabel">About</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-       Original dataset taken from the the Stanford Dogs Dataset. Logo thanks to NotKnifoon.
-       SUPPORT US!
-       Do you care about accessing free images of dogs on the internet? Do you want your dog pictures to be served at lightning fast speed with 99.999% uptime? Do you care about DaaS (Dogs as a Service)? Help us pay our hosting bills and ensure that Dog API stays free to access and use for everyone. We'll even gift you an executive business tie for your pet (or small child) to say thanks.
-      </div>
+        <h2>About</h2> <br>
+    </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">OK</button>
       </div>
@@ -125,7 +120,8 @@
 
 <div class="game-window d-none">
     <div class="d-inline-block score mt-2 mr-2">
-        <p> <span id="timerStart"> </span>&nbsp;&nbsp;&nbsp; <span id="steps"></span> </p>  
+        <p> <span class="badge info-window" id="timerStart"> </span>&nbsp;&nbsp;&nbsp; <span class="badge badge-pill info-window" id="steps"></span>&nbsp;&nbsp;&nbsp; 
+            <span class="badge info-window" id="level"></span> </p>  
     </div>
     <div class="container-fluid">  
             <div class="justify-content-center d-inline-block card" id="cards"> CARDS</div>   
@@ -153,22 +149,45 @@
 <div class="modal fade" id="gameEnd" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="gameEndLabel" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
     <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="gameEndLabel">Victory!</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      <div class="modal-header game-end-modal-header">
+        <h5 class="modal-title">Hooray!</h5> <br>
       </div>
       <div class="modal-body">
-          Congratulations!! <br>
-          You managed the game in <span id="timeAmount"></span> and in <span id="stepsAmount"></span>
+          You matched all the dogs <br> in <span class="result-style" id="timeResult"></span> and in <span class="result-style" id="stepsResult"></span> <br>
+          Good job!
+    <div class="dog2">
+	<div class="heart heart--1"></div>
+	<div class="heart heart--2"></div>
+	<div class="heart heart--3"></div>
+	<div class="heart heart--4"></div>
+	<div class="head2">
+			<div class="ear2 ear2--left"></div>
+			<div class="ear2 ear2--right"></div>
+			<div class="nose2"></div>	
+		<div class="face2">
+			<div class="eye2 eye2--left"></div>
+			<div class="eye2 eye2--right"></div>
+			<div class="mouth2"></div>
+		</div>
+	</div>
+	<div class="body2">
+		<div class="chest2"></div>
+		<div class="back"></div>
+		<div class="legs2">
+			<div class="legs2__front legs2__front--left"></div>
+			<div class="legs2__front legs2__front--right"></div>
+			<div class="legs2__back legs2__back--left"></div>
+			<div class="legs2__back legs2__back--right"></div>
+		</div>
+		<div class="tail2"></div>
+	</div>
+</div>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">OK</button>
       </div>
     </div>
   </div>
-</div>
-
-
 
 </body>
 
