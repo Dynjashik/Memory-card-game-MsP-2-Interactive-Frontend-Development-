@@ -19,7 +19,9 @@ $(".btn-level").click(function(){
     showCards(amount)
     startTimer()
     amountFlips = 0
+    var nameLevel = $(this).text()
     steps.innerHTML = " Steps: " + amountFlips
+    level.innerHTML = " Level: " + nameLevel
 })
 
 $(".btn-restart").click(function(){
@@ -30,19 +32,22 @@ $(".btn-restart").click(function(){
     $(".game-window").addClass("d-none")
     $("#playWindow").modal("show")
     stopTimer()
+
 })
 
 /*Flipping game cards*/
 
 
 $(".card").on('click','.back-side', function() {
-    amountFlips = amountFlips+1 
-    steps.innerHTML = " Steps: " + amountFlips 
+     
+    
 
     if (openedCardCount<2) {
         $(this).hide();
         $(this).next(".front-side").css("display", "inline-block").addClass("visible");
         openedCardCount=openedCardCount+1
+        amountFlips = amountFlips+1
+        steps.innerHTML = " Steps: " + amountFlips 
 
         selectedImageURL = $(this).next(".front-side").find("img").attr("src")
         openedCards.push(selectedImageURL)
@@ -71,8 +76,12 @@ $(".card").on('click','.back-side', function() {
                         stopTimer()
                   }
                   console.log("numItems: "+numItems + "  amount: " + amount)
-                  timeAmount.innerHTML = min +" minutes " + sec + " seconds ";
-                  stepsAmount.innerHTML = amountFlips + " steps";
+                  if (min==0){
+                      timeResult.innerHTML = sek + " seconds ";
+                  } else {
+                      timeResult.innerHTML = min +" minutes " + sek + " seconds ";
+                  }
+                  stepsResult.innerHTML = amountFlips + " steps";
             }
             openedCards = []
         }
@@ -86,6 +95,7 @@ const timer = document.getElementById('timerStart');
 
 var min = 0;
 var sec = 0;
+var sek
 var stoptime = true;
 
 function startTimer() {
@@ -123,6 +133,7 @@ function timerCycle() {
     }
 
     timer.innerHTML = "Time: "  + min + ':' + sec;
+    sek = sec
 
     setTimeout("timerCycle()", 1000);
   }
