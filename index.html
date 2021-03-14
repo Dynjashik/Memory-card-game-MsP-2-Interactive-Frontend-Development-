@@ -6,6 +6,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.1.1/css/hover-min.css" type="text/css" />
+        <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
         <link rel="stylesheet" href="assets/css/style.css"/>
         <link rel="stylesheet" href="assets/css/dogs-animation.css"/>  
     <title>Memory card game</title>
@@ -89,6 +90,17 @@
       </div>
       <div class="modal-body">
         <h2>How to play</h2> <br>
+        <div class="left-align"><strong>Match a dog</strong>  is a win-win memory game with 3 difficulty levels: 
+          <ul>Easy - 8 cards,</ul> 
+          <ul>Medium - 12 cards,</ul>
+          <ul>Hard - 16 cards;</ul> 
+The aim of the game is to match all pairs of dog’s breed  in the quickest time and minimum number of steps. <br>
+Remember, you may flip 2 cards at a time, if they are a match they will remain face up. If they are not you will flip them again,  so remember where you left your dogs. <br>
+Any time you may restart the game. <br>
+New game - new pictures. <br>
+Click <a href="https://dog.ceo/dog-api/breeds-list" class="tooltip-test" title="BREEDS LIST">here</a> to learn more about the different dog’s breeds. <br>
+</div>
+     Good Luck! <i class="fas fa-paw"></i>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">OK</button>
@@ -107,6 +119,13 @@
       </div>
       <div class="modal-body">
         <h2>About</h2> <br>
+    Do you like dogs? So, this game is for you.  <br> <br>
+        <div class="left-align"> Welcome to a memory matching game <strong> Match a dog</strong> that will introduce you to different breeds of dogs.<br><br>
+        This game has an uncountable number of images taken from the Stanford Dogs Dataset. <br>
+        Follow <a href="https://dog.ceo/dog-api/about" class="tooltip-test" title="Dog API">dog.ceo</a> you can learn more about this project that inspired this game.
+        There you can also add your dog to the collection and support the project in return by receiving a gift for your pet (or small child). <br><br>
+    </div>
+  Spend your time with pleasure! <i class="fas fa-paw"></i>
     </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">OK</button>
@@ -153,8 +172,10 @@
         <h5 class="modal-title">Hooray!</h5> <br>
       </div>
       <div class="modal-body">
+          <div class="left-align">
           You matched all the dogs <br> in <span class="result-style" id="timeResult"></span> and in <span class="result-style" id="stepsResult"></span> <br>
-          Good job!
+          </div>
+          Good job! <i class="fas fa-paw"></i>
     <div class="dog2">
 	<div class="heart heart--1"></div>
 	<div class="heart heart--2"></div>

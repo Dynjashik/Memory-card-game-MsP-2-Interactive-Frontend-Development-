@@ -62,6 +62,11 @@ h5 {
     border-radius: 1rem;
 }
 
+/*Styling how to play window*/
+.left-align{
+    text-align: justify;
+}
+
 /*Styling game window*/
 
 .info-window {

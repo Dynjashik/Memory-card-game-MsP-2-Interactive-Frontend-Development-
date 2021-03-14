@@ -39,9 +39,6 @@ $(".btn-restart").click(function(){
 
 
 $(".card").on('click','.back-side', function() {
-     
-    
-
     if (openedCardCount<2) {
         $(this).hide();
         $(this).next(".front-side").css("display", "inline-block").addClass("visible");
