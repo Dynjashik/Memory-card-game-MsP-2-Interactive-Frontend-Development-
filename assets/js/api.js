@@ -13,24 +13,24 @@ function getCards(cardAmount, writeCards) {
     xhr.send();
 }
 
-var imagesArray = []
+
 
 function showCards(cardAmount) {
     console.log("show cards")
     var el = document.getElementById("cards");
     el.innerHTML = "";
+    var imagesArray = []
 
     getCards(cardAmount, function(data) {
         data = data.message;
         
-        var backCard = "<div class = \"back-side card-side\"><img src=\"assets/images/dog-logo.png\" width=\"150\", height=\"150\"></div>"
+        var backCard = "<div class = \"back-side card-side\"><img src=\"assets/images/dog-logo-black.png\" width=\"150\", height=\"150\"></div>"
 
         data.forEach(function(item) {
             var frontCard = "<div class = \"front-side card-side \" ><img src=\""+ item + "\" width=\"150\", height=\"150\"></div>"
             imagesArray.push(frontCard)
             imagesArray.push(frontCard)
         });
-
 
         imagesArray = shuffle(imagesArray)
 
@@ -40,7 +40,6 @@ function showCards(cardAmount) {
            var row_counter = parseInt(i)+1
            if (row_counter%4 == 0) {
                 el.innerHTML += "<div>" + row + "</div>"
-                console.log(row)
                 row = ""
             }
         }
