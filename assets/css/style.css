@@ -1,23 +1,21 @@
-html, body{
-justify-content: center;
-align-items: center;
-text-align: center;
-background: #ffe16e;   
+html, body {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: #ffe16e;   
 }
 body {
-margin: 0;
-font-family: "Comic Sans MS", "Comic Sans", cursive;
-font-size: 18px;
+    margin: 0;
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
+    font-size: 18px;
 }
 /*Styling header*/
-
 .navbar, .nameGame {
-font-size: 3rem;
-justify-content: center;
+    font-size: 3rem;
+    justify-content: center;
 }
 
 /*Styling menu*/
-
 .btn-primary {
     margin: 5px 5px 5px 5px;
     padding: 0.375rem 1.75rem;
@@ -40,6 +38,7 @@ h5 {
 .modal-body {
     margin: auto;
     padding-top: 0px;
+    padding-bottom: 0px;
     min-height: 300px;
 }
 .btn-close {
@@ -48,8 +47,11 @@ h5 {
 .btn-close:hover {
     color: #6E64F0;
 }
-.btn-level, .btn-restart, .btn-secondary {
-  margin: 20px 5px 5px 5px;
+.btn-level,
+.btn-restart,
+.btn-secondary,
+.btn-mainmenu {
+    margin: 20px 5px 5px 5px;
     padding: 0.375rem 1.75rem;
     font-size: 1.5rem;
     border-radius: 1.25rem;
@@ -57,20 +59,19 @@ h5 {
     border-color: #6E64F0;
     color: white; 
 }
-.btn-secondary{
+.btn-secondary {
     font-size: 1rem;
     border-radius: 1rem;
 }
 
 /*Styling how to play window*/
-.left-align{
+.text-style{
     text-align: justify;
 }
 
 /*Styling game window*/
-
 .info-window {
-margin: 5px;
+    margin: 5px;
     padding: 0.375rem 1.75rem;
     font-size: 1.5rem;
      border: 2px solid #6e64f0;
@@ -79,48 +80,43 @@ margin: 5px;
     color: black;
 }
 
-
 /*Styling game cards*/
-
 .front-side.card-side {
     display: none;
 }
 .card-side {
     display: inline-block;
 }
-
 .card {
     background-color: #ffe16e;
     border: #ffe16e; 
 }
 img {
- border: 1px solid rgba(0,0,0,.2);
- border-radius: 1.3rem;
- max-width: 100%;
+    border: 1px solid rgba(0,0,0,.2);
+    border-radius: 1.3rem;
+    max-width: 100%;
 }
 
 /*Styling modal windows*/
-.modal-header{
+.modal-header {
     padding: 0px;
     border-bottom: 0px;
 }
-
 .modal-header .btn-close {
     padding: 0.5rem 1rem;
     margin: 0.2rem -.2rem 0rem auto;
 }
-
-.modal-footer{
+.modal-footer {
     padding: 0 6px 6px 6px;
     border-top: 0px;
 }
-
-.result-style{
+.result-style {
     background:#ffff9f;
 }
-
-.game-end-modal-header{
+.game-end-modal-header {
     padding: 10px;
     margin: auto;
 }
-
+.btn-left {
+    margin-right: auto;
+}

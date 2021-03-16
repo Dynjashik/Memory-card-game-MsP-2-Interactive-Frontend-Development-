@@ -30,9 +30,9 @@ $(".btn-restart").click(function(){
     $(".menu-page").addClass("d-block")
     $(".game-window").removeClass("d-block")
     $(".game-window").addClass("d-none")
+    $("#gameEnd").modal("hide")
     $("#playWindow").modal("show")
     stopTimer()
-
 })
 
 /*Flipping game cards*/
@@ -69,8 +69,8 @@ $(".card").on('click','.back-side', function() {
                   var numItems = $('.matched').length
                   if (numItems == amount*2) {
                       console.log("endGame")
-                        $("#gameEnd").modal("show")
-                        stopTimer()
+                      $("#gameEnd").modal("show")
+                      stopTimer()
                   }
                   console.log("numItems: "+numItems + "  amount: " + amount)
                   if (min==0){
@@ -97,36 +97,36 @@ var stoptime = true;
 
 function startTimer() {
   if (stoptime == true) {
-        stoptime = false;
-        timerCycle();
+      stoptime = false;
+      timerCycle();
     }
 }
 
 function stopTimer() {
   if (stoptime == false) {
-    stoptime = true;
-    sec = 0;
-    min = 0;
+      stoptime = true;
+      sec = 0;
+      min = 0;
   }
 }
 
 function timerCycle() {
     if (stoptime == false) {
-    sec = parseInt(sec);
-    min = parseInt(min);
-    sec = sec + 1;
-    console.log("cycle")
+        sec = parseInt(sec);
+        min = parseInt(min);
+        sec = sec + 1;
+        console.log("cycle")
 
     if (sec == 60) {
-      min = min + 1;
-      sec = 0;
+        min = min + 1;
+        sec = 0;
     }
     
     if (sec < 10 || sec == 0) {
-      sec = '0' + sec;
+        sec = '0' + sec;
     }
     if (min < 10 || min == 0) {
-      min = '0' + min;
+        min = '0' + min;
     }
 
     timer.innerHTML = "Time: "  + min + ':' + sec;
