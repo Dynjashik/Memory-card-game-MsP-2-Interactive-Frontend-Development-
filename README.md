@@ -20,6 +20,8 @@
 
 ## UX
 
+All users who like to spend their free time playing and relaxing.
+
 ### User Stories
 
 As a user I want to:
@@ -29,7 +31,6 @@ As a user I want to:
 * test my memory skills in a fun way;
 * have choise of difficulty levels to test my memory;
 * know my results of the game to improve them;
-* be encouraged to play again and again.
 
 ### Strategy
 
@@ -51,9 +52,34 @@ Mockup of the website was created in online tool "Balsamiq": link !!!!!!!!!!!!!!
 
 ### Surface
 
-The look of the website is warm and funny with dogs animations in a contrasting color scheme: warm yellow and dark lilla colours.
+The website has a warm and funny look with dogs animations in a contrasting warm colors: warm yellow and dark lilla, white and black.
 The font is Comic Sans MS that gives a very fun comic feel and is perfect for the site.
 
-## Technologies
+##Features
+
+*Main page has a main menu, consisting of 3 buttons:
+    * Play button - allows user to open the first modal with the difficulty options:
+        * Easy - allows user to load game window with 4 pairs of cards.
+        * Medium - allows user to load game window with  6 pairs of cards.
+        * Hard - allows user to load game window with 8 pairs of cards.
+    * How to play button - allows user to open the second modal with rules.
+    * About button - allows user to open the thirst modal with description and inspiration of the game with the link where the user can watch all colection of images and read about them.    
+
+* Game Window has:
+    * game area with number of cards depending on difficulty level where the user can play. Cards are real photos of dogs, selected random from the website dog.seo.
+      Game area has also display showing users countdown timer and number of their flips.
+    * button Restart that allows the user to return to the modal window with difficulty options,
+    * button Main Menu that allows the user to return to main page.
+    * modal window with results of the game, opening when game is finished, with buttons Main Menu and Ok.
+    
+
+## Features left to implement
+* Recording the best results in memory game for the users can compare their results.
+* Animation of flipping cards for better looking.
+* Add a dog's image to the final modal window with results of the game - add the most suitable dog's breed for the users, depending on their results.
+
+When the game is opened on mobile devices, all modal windows are the same, only game area is changed to a less number of cards in a row.
+
+##Technologies Used
 
 
