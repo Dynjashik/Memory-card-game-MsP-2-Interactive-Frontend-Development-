@@ -35,6 +35,15 @@ $(".btn-restart").click(function(){
     stopTimer()
 })
 
+$(".btn-mainmenu").click(function(){
+    console.log("mainmenu")
+    $(".menu-page").removeClass("d-none")
+    $(".menu-page").addClass("d-block")
+    $(".game-window").removeClass("d-block")
+    $(".game-window").addClass("d-none")
+    $("#gameEnd").modal("hide")
+})
+
 /*Flipping game cards*/
 
 
