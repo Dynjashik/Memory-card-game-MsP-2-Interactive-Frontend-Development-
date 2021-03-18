@@ -57,7 +57,8 @@ The font is Comic Sans MS that gives a very fun comic feel and is perfect for th
 
 ##Features
 
-*Main page has a main menu, consisting of 3 buttons:
+The website has 2 sections: a home page and a game page.
+*Home Page has a main menu, consisting of 3 buttons:
     * Play button - allows user to open the first modal with the difficulty options:
         * Easy - allows user to load game window with 4 pairs of cards.
         * Medium - allows user to load game window with  6 pairs of cards.
@@ -65,11 +66,11 @@ The font is Comic Sans MS that gives a very fun comic feel and is perfect for th
     * How to play button - allows user to open the second modal with rules.
     * About button - allows user to open the thirst modal with description and inspiration of the game with the link where the user can watch all colection of images and read about them.    
 
-* Game Window has:
+* Game Page has:
     * game area with number of cards depending on difficulty level where the user can play. Cards are real photos of dogs, selected random from the website dog.seo.
       Game area has also display showing users countdown timer and number of their flips.
     * button Restart that allows the user to return to the modal window with difficulty options,
-    * button Main Menu that allows the user to return to main page.
+    * button Main Menu that allows the user to return to Home Page.
     * modal window with results of the game, opening when game is finished, with buttons Main Menu and Ok.
     
 
@@ -82,4 +83,35 @@ When the game is opened on mobile devices, all modal windows are the same, only 
 
 ##Technologies Used
 
+###Languages used:
+HTML5 - for basic content and structure of the site.
+CSS3 - for design.
+Javascript - logic for the game.
+
+###Frameworks and libraries used:
+Bootstrap's components (navbar, buttons, badge, modal) - provides responsive layout.
+JQuery - for making the site interactive.
+Google FONTS - for the font for all game.
+Font Awesome - for using icons.
+Balsamiq - for creating a mockup of the game.
+Dog API - for dog's pictures for the game.
+
+###Tools and Other Resources:
+GitHub -  for version control and pushing content to repo.
+GitPod -  for building the site.
+TinyPNG - for reducing the size of images.
+COLOR TOOL - for color palettes and the accessibility of any color combination for UI.
+Mockup generator - for testing responsive website on various devices.
+W3 Schools - for HTML, CSS, JS tips.
+Stackoverflow - for finding answers on questions.
+
+##Testing
+
+##Deployment
+
+##Bugs
+
+##Credits
+###Contents
+###Acknowledgements
 
