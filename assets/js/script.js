@@ -17,7 +17,6 @@ $(".btn-level").click(function(){
     $("#playWindow").modal("hide")
     amount = $(this).attr("difficulty")
     showCards(amount)
-    startTimer()
     amountFlips = 0
     var nameLevel = $(this).text()
     steps.innerHTML = " Steps: " + amountFlips
@@ -48,6 +47,9 @@ $(".btn-mainmenu").click(function(){
 
 
 $(".card").on('click','.back-side', function() {
+    if (amountFlips==0) {
+        startTimer()
+    }
     if (openedCardCount<2) {
         $(this).hide();
         $(this).next(".front-side").css("display", "inline-block").addClass("visible");

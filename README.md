@@ -60,9 +60,9 @@ The font is Comic Sans MS that gives a very fun comic feel and is perfect for th
 The website has 2 sections: a home page and a game page.
 *Home Page has a main menu, consisting of 3 buttons:
     * Play button - allows user to open the first modal with the difficulty options:
-        * Easy - allows user to load game window with 4 pairs of cards.
-        * Medium - allows user to load game window with  6 pairs of cards.
-        * Hard - allows user to load game window with 8 pairs of cards.
+        * Easy - allows user to load game page with 4 pairs of cards.
+        * Medium - allows user to load game page with  6 pairs of cards.
+        * Hard - allows user to load game page with 8 pairs of cards.
     * How to play button - allows user to open the second modal with rules.
     * About button - allows user to open the thirst modal with description and inspiration of the game with the link where the user can watch all colection of images and read about them.    
 
@@ -71,7 +71,7 @@ The website has 2 sections: a home page and a game page.
       Game area has also display showing users countdown timer and number of their flips.
     * button Restart that allows the user to return to the modal window with difficulty options,
     * button Main Menu that allows the user to return to Home Page.
-    * modal window with results of the game, opening when game is finished, with buttons Main Menu and Ok.
+    * final modal page with results of the game, opening when game is finished, with buttons Main Menu and Ok.
     
 
 ## Features left to implement
@@ -110,8 +110,19 @@ Stackoverflow - for finding answers on questions.
 ##Deployment
 
 ##Bugs
+About size of cards
+the row of the cards in responsive website
 
 ##Credits
 ###Contents
+All content is written by the developer, Darya.
+
+###Media
+The card dog's images used in this game were obtained from the website dog.ceo that provides free access to the Dog API (Original dataset taken from the the Stanford Dogs Dataset).
+The back side cards is a logo of the same website dog.seo.
+The codes for two dog's animations on Main page and on Final Page are taken from the ........
+
 ###Acknowledgements
+Inspiration for this project was received from:
+
 
