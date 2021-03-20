@@ -31,6 +31,7 @@ $(".btn-restart").click(function(){
     $(".game-window").addClass("d-none")
     $("#gameEnd").modal("hide")
     $("#playWindow").modal("show")
+    timer.innerHTML = "Time: 00:00"
     stopTimer()
 })
 
@@ -84,12 +85,13 @@ $(".card").on('click','.back-side', function() {
                       stopTimer()
                   }
                   console.log("numItems: "+numItems + "  amount: " + amount)
-                  if (min==0){
-                      timeResult.innerHTML = sek + " seconds ";
+                  if (finalMin<1){
+                      timeResult.innerHTML = finalSec + " seconds ";
                   } else {
-                      timeResult.innerHTML = min +" minutes " + sek + " seconds ";
+                      timeResult.innerHTML = finalMin + " minutes " + finalSec + " seconds ";
                   }
                   stepsResult.innerHTML = amountFlips + " steps";
+            
             }
             openedCards = []
         }
@@ -103,7 +105,8 @@ const timer = document.getElementById('timerStart');
 
 var min = 0;
 var sec = 0;
-var sek
+var finalSec;
+var finalMin;
 var stoptime = true;
 
 function startTimer() {
@@ -116,6 +119,8 @@ function startTimer() {
 function stopTimer() {
   if (stoptime == false) {
       stoptime = true;
+      finalSec = sec
+      finalMin = min
       sec = 0;
       min = 0;
   }
@@ -141,7 +146,6 @@ function timerCycle() {
     }
 
     timer.innerHTML = "Time: "  + min + ':' + sec;
-    sek = sec
 
     setTimeout("timerCycle()", 1000);
   }
