@@ -87,6 +87,9 @@ h5 {
 .card-side {
     display: inline-block;
 }
+.card-side>img {
+    object-fit: cover; 
+}
 .card {
     background-color: #ffe16e;
     border: #ffe16e; 
