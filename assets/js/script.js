@@ -42,6 +42,7 @@ $(".btn-mainmenu").click(function(){
     $(".game-window").removeClass("d-block")
     $(".game-window").addClass("d-none")
     $("#gameEnd").modal("hide")
+    timer.innerHTML = "Time: 00:00"
 })
 
 /*Flipping game cards*/
