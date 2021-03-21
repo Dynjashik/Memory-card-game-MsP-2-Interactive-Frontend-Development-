@@ -16,8 +16,25 @@ body {
 }
 /*Styling header*/
 .navbar, .nameGame {
-    font-size: 3rem;
     justify-content: center;
+}
+
+@media screen and (min-width: 601px) {
+  .nameGame {
+    font-size: 3rem;
+  }
+}
+
+@media screen and (min-width: 351px) and (max-width: 600px){
+  .nameGame {
+    font-size: 2rem;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .nameGame {
+    font-size: 1.7rem;
+  }
 }
 
 /*Styling menu*/
