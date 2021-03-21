@@ -2,7 +2,7 @@
 
 "Match a dog" is a win-win card memory game that shows dog's breeds images that the user should find the matching pair, testing their memory in funny way. The game can also inspire to participate in a charity project that is a source for dog's pictures.
 
-![Am I responsive]()
+![mockup](https://github.com/Dynjashik/Memory-card-game-MsP-2-Interactive-Frontend-Development-/blob/7f4f1442978f1c5b7ed20fb2738f14045eecaf1a/assets/images/dog-logo-black.png)
 Live Website: [here.](https://dynjashik.github.io/Memory-card-game-MsP-2-Interactive-Frontend-Development-/)
 ## Table of Contents
 **[User Experience](#user-experience)** 
@@ -48,11 +48,13 @@ When game is completed the final modal is opened with results.
 
 ### Skeleton
 
-Mockup of the website was created in online tool "Balsamiq": link !!!!!!!!!!!!!!!
+Mockup of the website was created in tool "Balsamiq Wireframes": link !!!!!!!!!!!!!!!
+There were made some changes in mockup during creating the game: arrangement of buttons, game cards, the window with results of the game.
 
 ### Surface
 
-The website has a warm funny look with dogs animations in a contrasting juicy colors: soft and light yellow, dark lilla for background, white and black for text.
+The website has a warm funny look with dog's animations in a contrasting juicy colors: soft and light yellow, dark lilla for background, white and black for text according the accessibility level of any color combination in [COLOR TOOL](https://material.io/resources/color/#!/?view.left=0&view.right=1&primary.color=ffe16e&secondary.color=6d63ef)
+![img](!!!!!!!)
 The font is Comic Sans MS that gives a very fun comic feel and is perfect for the easy game.
 
 ##Features
@@ -91,7 +93,6 @@ Javascript - logic for the game.
 ###Frameworks and libraries used:
 [Bootstrap's components](https://getbootstrap.com/) (navbar, buttons, badge, modal) - provides responsive layout.
 [JQuery](https://jquery.com/) - for making the site interactive.
-[Googlefonts](https://fonts.google.com/) - for the font for all game.
 [Font Awesome](https://fontawesome.com/) - for using icons.
 [Balsamiq](https://balsamiq.com/) - for creating a mockup of the game.
 [Dog API](https://dog.ceo/dog-api/about) - for dog's pictures for the game.
@@ -100,32 +101,54 @@ Javascript - logic for the game.
 [Github](https://github.com/) -  for version control and pushing content to repo.
 [Gitpod](https://www.gitpod.io/)  -  for building the site.
 [TinyPNG](https://tinypng.com/) - for reducing the size of images.
+[Wfonts](https://www.wfonts.com/font/comic-sans-ms) - for font of the website.
 [COLOR TOOL](https://material.io/resources/color/) - for color palettes and the accessibility of any color combination for UI.
 [Mockup generator](http://techsini.com/multi-mockup/index.php) - for testing responsive website on various devices.
 [W3 Schools](https://www.w3schools.com/) - for HTML, CSS, JS tips.
 [Stackoverflow](stackoverflow.com) - for finding answers on questions.
+[Jsonformatter](https://jsonformatter.org/scss-to-css) - for transforming SCSS code into CSS code for dog's animations.
 
 ###Codes
-https://stackoverflow.com/questions/2450954/how-to-randomize-shuffle-a-javascript-array -  shuffle images
-https://dev.to/gspteck/create-a-stopwatch-in-javascript-2mak - Stopwatch timer 
-https://medium.muz.li/inspiring-examples-of-css-animation-2b2a5dd464e0
-https://jsonformatter.org/scss-to-css
+Some of the code for the game was taken from the sources:
+*  [Stackoverflow](https://stackoverflow.com/questions/2450954/how-to-randomize-shuffle-a-javascript-array) - for shuffling images of game cards.
+*  [Stopwatch](https://dev.to/gspteck/create-a-stopwatch-in-javascript-2mak) - for timer.
+*  [CSS-animation](https://medium.muz.li/inspiring-examples-of-css-animation-2b2a5dd464e0) - for dog's animations.
 
 ##Testing
-It was tested from desktop across different screen sizes on Chrome and Internet Explorer. It's also tested on mobile devices such as Honor 8, iPhone 6, iPhone 11 Pro.
 
-Testing was mainly focused on:
+The following steps were taken to ensure the site was performing as it should:
+###Feature testing
 
-How HTML and CSS files are written;
-How navigation menu works;
-How content and colors look like in every section in different screen sizes;
-How webpage behaves when scrolling;
-How CV is getting opened and downloaded;
-How social links work.
-The following tests have been used for checking the HTML and CSS files:
+*Home Page has a main menu, consisting of 3 buttons:
+    * Play button - allows user to open the first modal with the difficulty options:
+        * Easy - allows user to load game page with 4 pairs of cards.
+        * Medium - allows user to load game page with  6 pairs of cards.
+        * Hard - allows user to load game page with 8 pairs of cards.
+    * How to play button - allows user to open the second modal with rules.
+    * About button - allows user to open the thirst modal with description and inspiration of the game with the link where the user can watch all colection of images and read about them.    
 
-W3C HTML Validator;
-W3C CSS Validator.
+* Game Page has:
+    * game area with number of cards depending on difficulty level where the user can play. Cards are real photos of dogs, selected random from the website dog.seo.
+      Game area has also display showing users countdown timer and number of their flips.
+    * button Restart that allows the user to return to the modal window with difficulty options,
+    * button Main Menu that allows the user to return to Home Page.
+    * final modal page with results of the game, opening when game is finished, with buttons Main Menu and Ok.
+### User stories Testing
+* know the game rules explained to me in easy and short way;
+* enjoy the design and navigate through the site intuitively;
+* know interesting information about the game that encourages me to play it;
+* test my memory skills in a fun way;
+* have choise of difficulty levels to test my memory;
+* know my results of the game to improve them;
+
+The following online validators have been used for checking the code works without any errors or warnings:
+* W3C HTML Validator;
+* W3C CSS Validator;
+* JShint.
+
+Lighthouse testing in developer tools:
+
+The site was tested across different screen sizes: Chrome, Internet Explorer, Safari, Firefox, UC Browser, Opera and Samsung Internet. It was also tested on mobile devices such as:....
 Testing showed that the website works well for both desktops and mobile devices.
 
 ##Deployment
@@ -139,7 +162,6 @@ The website is published at  [https://dynjashik.github.io/Memory-card-game-MsP-2
 
 
 ##Bugs
-About size of cards
 the row of the cards in responsive website
 
 ##Credits
@@ -149,7 +171,7 @@ All content is written by the developer, Darya.
 ###Media
 The card dog's images used in this game were obtained from the website dog.ceo that provides free access to the Dog API (Original dataset taken from the the Stanford Dogs Dataset).
 The back side cards is a logo of the same website dog.seo.
-The codes for two dog's animations on Main page and on Final Page are taken from the ........
+The codes for two dog's animations on Main page and on Final Page are taken from [this source](https://medium.muz.li/inspiring-examples-of-css-animation-2b2a5dd464e0)
 
 ###Acknowledgements
 Inspiration for this project was received from:
