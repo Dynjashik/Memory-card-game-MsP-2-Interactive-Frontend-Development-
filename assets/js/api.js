@@ -34,7 +34,7 @@ function showCards(cardAmount) {
         imagesArray = shuffle(imagesArray);
 
         var row = "";
-        for (i in imagesArray) {
+        for(var i = 0; i < imagesArray.length; i++) {
             row += backCard + imagesArray[i];
             var row_counter = parseInt(i) + 1;
             if (row_counter % 4 == 0) {
