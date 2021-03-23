@@ -3,8 +3,8 @@
 "Match a dog" is a win-win card memory game that shows different dog's breeds images that the user should find the matching pair, testing their memory in funny way. The game can also inspire to participate in a charity project that is a source for dog's pictures.
 
 ![mockup](https://github.com/Dynjashik/Memory-card-game-MsP-2-Interactive-Frontend-Development-/blob/4284a30fdc4efadd26a8912213baf665752f828a/assets/images/demo.png)
-
-Live Website: [here.](https://dynjashik.github.io/Memory-card-game-MsP-2-Interactive-Frontend-Development-/)
+https://dynjashik.github.io/Memory-card-game-MsP-2-Interactive-Frontend-Development-/
+Live Website: [here.]()
 
 ## Table of Contents
 **[User Experience](#UX)** 
@@ -149,7 +149,7 @@ the row of the cards in responsive website
 
 ### Contents
 
-All content is written by the developer, Darya.
+All content is written by the developer, Darya. Some information is taken from the website [dog.ceo](https://dog.ceo/dog-api/about).
 
 ### Media
 

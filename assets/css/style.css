@@ -18,37 +18,29 @@ body {
 
 /*Styling header*/
 
-.navbar, .nameGame {
+.navbar, .name-game {
     justify-content: center;
-}
-
-@media screen and (min-width: 601px) {
-  .nameGame {
-    font-size: 3rem;
-  }
-}
-
-@media screen and (min-width: 351px) and (max-width: 600px){
-  .nameGame {
-    font-size: 2rem;
-  }
-}
-
-@media screen and (max-width: 350px) {
-  .nameGame {
-    font-size: 1.7rem;
-  }
 }
 
 /*Styling menu*/
 
 .btn-primary {
-    margin: 5px 5px 5px 5px;
+    margin: 5px;
     padding: 0.375rem 1.75rem;
     font-size: 2rem;
     border-radius: 1.25rem;
     background-color: #6E64F0;
     border-color: #6E64F0;
+}
+
+.btn-play {
+    margin: 10px;
+    padding: 1.375rem 2.75rem;
+    font-size: 2.5rem;
+}
+
+.btn-about {
+    padding: 0.375rem 3rem;
 }
 
 .btn-primary:hover, .btn-level:hover, .btn-secondary:hover {
@@ -57,8 +49,8 @@ body {
 }
 
 .modal-content {
-    background-color: #ffe16e;
     border-radius: 1.3rem;
+    background-color: #ffff9f;
 }
 
 h5 {
@@ -115,6 +107,14 @@ h5 {
     background-color: #ffff9f;
     color: black;
 }
+.game-window {
+    margin-top: 45px;
+}
+
+.card-area {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
 
 /*Styling game cards*/
 
@@ -159,14 +159,29 @@ img {
 }
 
 .result-style {
-    background:#ffff9f;
+    background:#ffe16e;
 }
 
-.game-end-modal-header {
-    padding: 10px;
-    margin: auto;
+.btn-center {
+  margin: auto;
 }
 
-.btn-left {
-    margin-right: auto;
+/*Media*/
+
+@media screen and (min-width: 601px) {
+  .name-game {
+    font-size: 3rem;
+  }
+}
+
+@media screen and (min-width: 351px) and (max-width: 600px){
+  .name-game {
+    font-size: 2rem;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .name-game {
+    font-size: 1.7rem;
+  }
 }

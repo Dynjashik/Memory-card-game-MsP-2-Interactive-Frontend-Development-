@@ -18,14 +18,14 @@
 
 <body>
 
-    <!--Main page with menu-->
+    <!--Home page with menu-->
     <header>
         <nav class="navbar navbar-light bg-light">
-            <span class="navbar-brand mb-0 h1 nameGame"><i class="fas fa-paw"></i> MATCH A DOG <i
+            <span class="navbar-brand mb-0 h1 name-game"><i class="fas fa-paw"></i> MATCH A DOG <i
                     class="fas fa-paw"></i></span>
         </nav>
     </header>
-    <!--Menu-->
+    <!--Main Menu-->
     <div class="menu-page d-block">
         <!--<div class="dog-logo"><img src="assets/images/dog-logo-black.png" alt="dog"></div>-->
         <div class="dog">
@@ -62,32 +62,14 @@
             </div>
         </div>
 
-        <!--Button trigger modal (bootstrap)-->
-        <div><button type="button" class="btn btn-primary" data-bs-toggle="modal"
-                data-bs-target="#playWindow">Play</button></div>
+        <!--Button trigger modal windows (source is bootstrap)-->
+
         <div><button type="button" class="btn btn-primary" data-bs-toggle="modal"
                 data-bs-target="#descriptionWindow">How to play</button></div>
-        <div><button type="button" class="btn btn-primary" data-bs-toggle="modal"
+        <div><button type="button" class="btn btn-primary btn-about" data-bs-toggle="modal"
                 data-bs-target="#aboutWindow">About</button></div>
-
-        <!--PLAY BUTTON-->
-
-        <div class="modal fade" id="playWindow" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
-            aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered modal-sm modal-dialog-scrollable">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                        <h2>Game difficulty:</h2>
-                        <button type="button" id="btn-easy" class="btn-level" data-difficulty=4>EASY</button>
-                        <button type="button" id="btn-medium" class="btn-level" data-difficulty=6>MEDIUM</button>
-                        <button type="button" id="btn-hard" class="btn-level" data-difficulty=8>HARD</button>
-                    </div>
-                </div>
-            </div>
-        </div>
+        <div><button type="button" class="btn btn-primary btn-play" data-bs-toggle="modal"
+                data-bs-target="#playWindow">Play</button></div>
 
         <!-- HOW TO PLAY BUTTON-->
 
@@ -156,6 +138,25 @@
         </div>
     </div>
 
+    <!--PLAY BUTTON-->
+
+    <div class="modal fade" id="playWindow" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-sm modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <h2>Game difficulty:</h2>
+                    <button type="button" id="btn-easy" class="btn-level" data-difficulty=4>EASY</button>
+                    <button type="button" id="btn-medium" class="btn-level" data-difficulty=6>MEDIUM</button>
+                    <button type="button" id="btn-hard" class="btn-level" data-difficulty=8>HARD</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!--GAME WINDOW-->
 
     <div class="game-window d-none">
@@ -164,22 +165,23 @@
                     class="badge badge-pill info-window" id="steps"></span>&nbsp;&nbsp;&nbsp;
                 <span class="badge info-window" id="level"></span> </p>
         </div>
-        <div class="container-fluid">
+        <div class="container-fluid card-area">
             <div class="justify-content-center d-inline-block card" id="cards"> CARDS</div>
         </div>
         <button type="button" class="btn-restart">RESTART</button>
-        <button type="button" class="btn-mainmenu">MAIN MENU</button>
+        <button type="button" class="btn-mainmenu">QUIT</button>
     </div>
 
-    <!--THE END OF THE GAME-->
+    <!--MODAL WITH RESULTS OF THE GAME-->
     <div class="modal fade" id="gameEnd" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
         aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
-                <div class="modal-header game-end-modal-header">
-                    <h5 class="modal-title">Hooray!</h5> <br>
+                <div class="modal-header">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
+                    <h5> Hooray!</h5>
                     You matched all the dogs <br> in <span class="result-style" id="timeResult"></span> and in <span
                         class="result-style" id="stepsResult"></span> <br> <br>
                     Good job! <i class="fas fa-paw"></i>
@@ -211,9 +213,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-mainmenu btn-secondary btn-left">MAIN MENU</button>
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">OK</button>
+                <div class="modal-footer btn-center">
+                    <button type="button" class="btn btn-mainmenu btn-secondary">PLAY AGAIN</button>
                 </div>
             </div>
         </div>
