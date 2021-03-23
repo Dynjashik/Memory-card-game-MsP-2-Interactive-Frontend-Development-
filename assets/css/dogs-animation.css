@@ -247,7 +247,8 @@
 	}
 	 12% {
 		 transform: rotate(-5%);
-	}
+    }
+    
 	 from, 33.3%, 66%, to {
 		 transform: rotate(0);
 	}
