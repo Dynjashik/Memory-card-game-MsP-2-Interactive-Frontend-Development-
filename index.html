@@ -1,220 +1,247 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.1.1/css/hover-min.css" type="text/css" />
-        <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
-        <link rel="stylesheet" href="assets/css/style.css"/>
-        <link rel="stylesheet" href="assets/css/dogs-animation.css"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.1.1/css/hover-min.css"
+        type="text/css" />
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/dogs-animation.css" />
 
     <title>Memory card game</title>
 </head>
 
 <body>
 
- <!--Main page with menu-->    
-     <header>
-         <nav class="navbar navbar-light bg-light">
-            <span class="navbar-brand mb-0 h1 nameGame"><i class="fas fa-paw"></i> MATCH A DOG <i class="fas fa-paw"></i></span>
-        </nav>     
+    <!--Main page with menu-->
+    <header>
+        <nav class="navbar navbar-light bg-light">
+            <span class="navbar-brand mb-0 h1 nameGame"><i class="fas fa-paw"></i> MATCH A DOG <i
+                    class="fas fa-paw"></i></span>
+        </nav>
     </header>
-   <!--Menu--> 
-   <div class="menu-page d-block">
-    <!--<div class="dog-logo"><img src="assets/images/dog-logo-black.png" alt="dog"></div>-->
-<div class="dog">
-  <div class="dog-body">
-    <div class="dog-tail">
-      <div class="dog-tail">
-        <div class="dog-tail">
-          <div class="dog-tail">
-            <div class="dog-tail">
-              <div class="dog-tail">
+    <!--Menu-->
+    <div class="menu-page d-block">
+        <!--<div class="dog-logo"><img src="assets/images/dog-logo-black.png" alt="dog"></div>-->
+        <div class="dog">
+            <div class="dog-body">
                 <div class="dog-tail">
-                  <div class="dog-tail"></div>
+                    <div class="dog-tail">
+                        <div class="dog-tail">
+                            <div class="dog-tail">
+                                <div class="dog-tail">
+                                    <div class="dog-tail">
+                                        <div class="dog-tail">
+                                            <div class="dog-tail"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-              </div>
             </div>
-          </div>
+            <div class="dog-torso"></div>
+            <div class="dog-head">
+                <div class="dog-ears">
+                    <div class="dog-ear"></div>
+                    <div class="dog-ear"></div>
+                </div>
+                <div class="dog-eyes">
+                    <div class="dog-eye"></div>
+                    <div class="dog-eye"></div>
+                </div>
+                <div class="dog-muzzle">
+                    <div class="dog-tongue"></div>
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
-  </div>
-  <div class="dog-torso"></div>
-  <div class="dog-head">
-    <div class="dog-ears">
-      <div class="dog-ear"></div>
-      <div class="dog-ear"></div>
-    </div>
-    <div class="dog-eyes">
-      <div class="dog-eye"></div>
-      <div class="dog-eye"></div>
-    </div>
-    <div class="dog-muzzle">
-      <div class="dog-tongue"></div>
-    </div>
-  </div>
-</div>
 
-<!--Button trigger modal (bootstrap)--> 
-<div><button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#playWindow">Play</button></div>
-<div><button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#descriptionWindow">How to play</button></div>
-<div><button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#aboutWindow">About</button></div>
+        <!--Button trigger modal (bootstrap)-->
+        <div><button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                data-bs-target="#playWindow">Play</button></div>
+        <div><button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                data-bs-target="#descriptionWindow">How to play</button></div>
+        <div><button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                data-bs-target="#aboutWindow">About</button></div>
 
-<!--PLAY BUTTON-->
+        <!--PLAY BUTTON-->
 
-<div class="modal fade" id="playWindow" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="playWindowLabel" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered modal-sm modal-dialog-scrollable">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        <h2>Game difficulty:</h2>
-        <button type="button" id="btn-easy" class="btn-level" difficulty=4>EASY</button>
-        <button type="button" id="btn-medium" class="btn-level" difficulty=6>MEDIUM</button>
-        <button type="button" id="btn-hard" class="btn-level" difficulty=8>HARD</button>
-      </div>
+        <div class="modal fade" id="playWindow" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+            aria-labelledby="playWindowLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-sm modal-dialog-scrollable">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <h2>Game difficulty:</h2>
+                        <button type="button" id="btn-easy" class="btn-level" difficulty=4>EASY</button>
+                        <button type="button" id="btn-medium" class="btn-level" difficulty=6>MEDIUM</button>
+                        <button type="button" id="btn-hard" class="btn-level" difficulty=8>HARD</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- HOW TO PLAY BUTTON-->
+
+        <div class="modal fade" id="descriptionWindow" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+            aria-labelledby="descriptionWindowLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <h2>How to play</h2> <br>
+                        <div class="text-style"><strong>Match a dog</strong> is a win-win memory game with 3 difficulty
+                            levels:
+                            <li>
+                                <ul>Easy - 8 cards,</ul>
+                                <ul>Medium - 12 cards,</ul>
+                                <ul>Hard - 16 cards;</ul>
+                            </li>
+                            The aim of the game is to match all pairs of dogs as fast as possible and with minimum
+                            number of steps. <br>
+                            Remember, you may flip only 2 cards at a time. If it is a match, they will remain face up.
+                            Otherwise you will need to find matching cards around all available ones.<br>
+                            You can restart the game anytime. <br>
+                            New game - new pictures. <br>
+                            Click <a href="https://dog.ceo/dog-api/breeds-list" class="tooltip-test" title="BREEDS LIST"
+                                target="_blank">Dog API</a> to learn more about the different dog’s breeds. <br>
+                        </div>
+                        Good Luck! <i class="fas fa-paw"></i>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">OK</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--ABOUT BUTTON-->
+
+        <div class="modal fade" id="aboutWindow" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+            aria-labelledby="aboutWindowLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <h2>About</h2> <br>
+                        Do you like dogs? Then this game is for you.<br> <br>
+                        <div class="text-style"> Welcome to a memory matching game <strong> Match a
+                                dog</strong>.<br><br>
+                            This game has a massive collection of images taken from the Stanford Dogs Dataset. <br>
+                            Follow <a href="https://dog.ceo/dog-api/about" class="tooltip-test" title="Dog API"
+                                target="_blank">dog.ceo</a> where you can learn more about the project that inspired
+                            this game.
+                            There you can also add your own dog photo to the collection and support the project. In
+                            return you can receive a gift for your pet (or small child). <br><br>
+                        </div>
+                        Enjoy your play time! <i class="fas fa-paw"></i>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">OK</button>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-  </div>
-</div>
 
-<!-- HOW TO PLAY BUTTON-->
+    <!--GAME WINDOW-->
 
-<div class="modal fade" id="descriptionWindow" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="descriptionWindowLabel" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        <h2>How to play</h2> <br>
-        <div class="text-style"><strong>Match a dog</strong>  is a win-win memory game with 3 difficulty levels: 
-          <ul>Easy - 8 cards,</ul> 
-          <ul>Medium - 12 cards,</ul>
-          <ul>Hard - 16 cards;</ul> 
-The aim of the game is to match all pairs of dogs as fast as possible and with minimum number of steps. <br>
-Remember, you may flip only 2 cards at a time. If it is a match, they will remain face up. Otherwise you will need to find matching cards around all available ones.<br>
-You can restart the game anytime. <br>
-New game - new pictures. <br>
-Click <a href="https://dog.ceo/dog-api/breeds-list" class="tooltip-test" title="BREEDS LIST" target="_blank">Dog API</a> to learn more about the different dog’s breeds. <br>
-</div>
-     Good Luck! <i class="fas fa-paw"></i>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">OK</button>
-      </div>
+    <div class="game-window d-none">
+        <div class="d-inline-block score mt-2 mr-2">
+            <p> <span class="badge info-window" id="timerStart"> Time: 00:00</span>&nbsp;&nbsp;&nbsp; <span
+                    class="badge badge-pill info-window" id="steps"></span>&nbsp;&nbsp;&nbsp;
+                <span class="badge info-window" id="level"></span> </p>
+        </div>
+        <div class="container-fluid">
+            <div class="justify-content-center d-inline-block card" id="cards"> CARDS</div>
+        </div>
+        <button type="button" class="btn-restart">RESTART</button>
+        <button type="button" class="btn-mainmenu">MAIN MENU</button>
     </div>
-  </div>
-</div>
 
-<!--ABOUT BUTTON-->
+    <div class="modal fade" id="descriptionWindow" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="descriptionWindowLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="descriptionWindowLabel">How to play</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">OK</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
-<div class="modal fade" id="aboutWindow" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="aboutWindowLabel" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        <h2>About</h2> <br>
-    Do you like dogs? Then this game is for you.<br> <br>
-        <div class="text-style"> Welcome to a memory matching game <strong> Match a dog</strong>.<br><br>
-        This game has a massive collection of images taken from the Stanford Dogs Dataset. <br>
-        Follow <a href="https://dog.ceo/dog-api/about" class="tooltip-test" title="Dog API" target="_blank" >dog.ceo</a> where you can learn more about the project that inspired this game.
-        There you can also add your own dog photo to the collection and support the project. In return you can receive a gift for your pet (or small child). <br><br>
-    </div>
-  Enjoy your play time! <i class="fas fa-paw"></i>
-    </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">OK</button>
-      </div>
-    </div>
-  </div>
-</div>
-</div>
-
-<!--GAME WINDOW-->
-
-<div class="game-window d-none">
-    <div class="d-inline-block score mt-2 mr-2">
-        <p> <span class="badge info-window" id="timerStart"> Time: 00:00</span>&nbsp;&nbsp;&nbsp; <span class="badge badge-pill info-window" id="steps"></span>&nbsp;&nbsp;&nbsp; 
-            <span class="badge info-window" id="level"></span> </p>  
-    </div>
-    <div class="container-fluid">  
-            <div class="justify-content-center d-inline-block card" id="cards"> CARDS</div>   
-    </div> 
-    <button type="button" class="btn-restart">RESTART</button>
-    <button type="button" class="btn-mainmenu">MAIN MENU</button>            
-</div>
-
-<div class="modal fade" id="descriptionWindow" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="descriptionWindowLabel" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="descriptionWindowLabel">How to play</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">OK</button>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!--THE END OF THE GAME-->
-<div class="modal fade" id="gameEnd" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="gameEndLabel" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
-    <div class="modal-content">
-      <div class="modal-header game-end-modal-header">
-        <h5 class="modal-title">Hooray!</h5> <br>
-      </div>
-      <div class="modal-body">
-          You matched all the dogs <br> in <span class="result-style" id="timeResult"></span> and in <span class="result-style" id="stepsResult"></span> <br> <br>
-          Good job! <i class="fas fa-paw"></i>
-    <div class="dog2">
-	<div class="heart heart--1"></div>
-	<div class="heart heart--2"></div>
-	<div class="heart heart--3"></div>
-	<div class="heart heart--4"></div>
-	<div class="head2">
-			<div class="ear2 ear2--left"></div>
-			<div class="ear2 ear2--right"></div>
-			<div class="nose2"></div>	
-		<div class="face2">
-			<div class="eye2 eye2--left"></div>
-			<div class="eye2 eye2--right"></div>
-			<div class="mouth2"></div>
-		</div>
-	</div>
-	<div class="body2">
-		<div class="chest2"></div>
-		<div class="back"></div>
-		<div class="legs2">
-			<div class="legs2__front legs2__front--left"></div>
-			<div class="legs2__front legs2__front--right"></div>
-			<div class="legs2__back legs2__back--left"></div>
-			<div class="legs2__back legs2__back--right"></div>
-		</div>
-		<div class="tail2"></div>
-	</div>
-</div>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-mainmenu btn-secondary btn-left">MAIN MENU</button>            
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">OK</button>
-      </div>
-    </div>
-  </div>
+    <!--THE END OF THE GAME-->
+    <div class="modal fade" id="gameEnd" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="gameEndLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header game-end-modal-header">
+                    <h5 class="modal-title">Hooray!</h5> <br>
+                </div>
+                <div class="modal-body">
+                    You matched all the dogs <br> in <span class="result-style" id="timeResult"></span> and in <span
+                        class="result-style" id="stepsResult"></span> <br> <br>
+                    Good job! <i class="fas fa-paw"></i>
+                    <div class="dog2">
+                        <div class="heart heart--1"></div>
+                        <div class="heart heart--2"></div>
+                        <div class="heart heart--3"></div>
+                        <div class="heart heart--4"></div>
+                        <div class="head2">
+                            <div class="ear2 ear2--left"></div>
+                            <div class="ear2 ear2--right"></div>
+                            <div class="nose2"></div>
+                            <div class="face2">
+                                <div class="eye2 eye2--left"></div>
+                                <div class="eye2 eye2--right"></div>
+                                <div class="mouth2"></div>
+                            </div>
+                        </div>
+                        <div class="body2">
+                            <div class="chest2"></div>
+                            <div class="back"></div>
+                            <div class="legs2">
+                                <div class="legs2__front legs2__front--left"></div>
+                                <div class="legs2__front legs2__front--right"></div>
+                                <div class="legs2__back legs2__back--left"></div>
+                                <div class="legs2__back legs2__back--right"></div>
+                            </div>
+                            <div class="tail2"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-mainmenu btn-secondary btn-left">MAIN MENU</button>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">OK</button>
+                </div>
+            </div>
+        </div>
 </body>
 
-<script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"
+    integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
+    crossorigin="anonymous"></script>
 <script src="assets/js/api.js"></script>
 <script src="assets/js/script.js"></script>
 
-<footer></footer>
 </html>

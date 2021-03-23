@@ -51,16 +51,17 @@ When game is completed the final modal is opened with results.
 
 ### Skeleton
 
-Mockup of the website was created in tool ["Balsamiq Wireframes"](https://github.com/Dynjashik/Memory-card-game-MsP-2-Interactive-Frontend-Development-/blob/4284a30fdc4efadd26a8912213baf665752f828a/assets/images/Balsamiq%20Wireframes.pdf)
+Mockup of the website was created in tool ["Balsamiq Wireframes"](https://github.com/Dynjashik/Memory-card-game-MsP-2-Interactive-Frontend-Development-/blob/4284a30fdc4efadd26a8912213baf665752f828a/assets/images/Balsamiq%20Wireframes.pdf).
 There were made some changes in mockup during creating the game: arrangement of buttons, game cards, the window with results of the game.
 
 ### Surface
 
-The website has a warm funny look with dog's animations in a contrasting juicy colors: soft and light yellow, dark lilla for background, white and black for text according the accessibility level of any color combination in [COLOR TOOL](https://material.io/resources/color/#!/?view.left=0&view.right=1&primary.color=ffe16e&secondary.color=6d63ef)
+The website has a warm funny look with dog's animations in a contrasting juicy colors: soft and light yellow, dark lilla for background, white and black for text according the accessibility level of any color combination in [COLOR TOOL](https://material.io/resources/color/#!/?view.left=0&view.right=1&primary.color=ffe16e&secondary.color=6d63ef).
 ![img](https://github.com/Dynjashik/Memory-card-game-MsP-2-Interactive-Frontend-Development-/blob/4284a30fdc4efadd26a8912213baf665752f828a/assets/images/Color%20Tool.png)
 
-Images for card back side and font side are taken from the website [dog.ceo](https://dog.ceo/dog-api/breeds-list), using their free API. Image for card back side is a logo of the website.
-[img](https://github.com/Dynjashik/Memory-card-game-MsP-2-Interactive-Frontend-Development-/blob/4284a30fdc4efadd26a8912213baf665752f828a/assets/images/dog-logo-black.png)
+Images for card back side and font side are taken from the website [dog.ceo](https://dog.ceo/dog-api/breeds-list), using their free API. 
+Image for card back side is a logo of the website.
+![img](https://github.com/Dynjashik/Memory-card-game-MsP-2-Interactive-Frontend-Development-/blob/4284a30fdc4efadd26a8912213baf665752f828a/assets/images/dog-logo-black.png)
 
 The font is Comic Sans MS that gives a very fun comic feel and is perfect for the easy game.
 
@@ -95,41 +96,27 @@ When the game is opened on mobile devices, all modal windows are the same, only 
 ### Languages used:
 
 HTML5 - for basic content and structure of the site.
-
 CSS3 - for design.
-
 Javascript - logic for the game.
 
 ### Frameworks and libraries used:
 
 [Bootstrap's components](https://getbootstrap.com/) (navbar, buttons, badge, modal) - provides responsive layout.
-
 [JQuery](https://jquery.com/) - for making the site interactive.
-
 [Font Awesome](https://fontawesome.com/) - for using icons.
-
 [Balsamiq](https://balsamiq.com/) - for creating a mockup of the game.
-
 [Dog API](https://dog.ceo/dog-api/about) - for dog's pictures for the game.
 
 ### Tools and Other Resources:
 
 [Github](https://github.com/) -  for version control and pushing content to repo.
-
 [Gitpod](https://www.gitpod.io/)  -  for building the site.
-
 [TinyPNG](https://tinypng.com/) - for reducing the size of images.
-
 [Wfonts](https://www.wfonts.com/font/comic-sans-ms) - for font of the website.
-
 [COLOR TOOL](https://material.io/resources/color/) - for color palettes and the accessibility of any color combination for UI.
-
 [Mockup generator](http://techsini.com/multi-mockup/index.php) - for testing responsive website on various devices.
-
 [W3 Schools](https://www.w3schools.com/) - for HTML, CSS, JS tips.
-
 [Stackoverflow](stackoverflow.com) - for finding answers on questions.
-
 [Jsonformatter](https://jsonformatter.org/scss-to-css) - for transforming SCSS code into CSS code for dog's animations.
 
 ### Codes
@@ -143,7 +130,6 @@ Some of the code for the game was taken from the sources:
 
 The following steps were taken to ensure the site was performing as it should:
 
-
 ## Deployment
 
 Steps for deployment the website to a hosting platform GitHub Pages:
@@ -152,8 +138,7 @@ Steps for deployment the website to a hosting platform GitHub Pages:
 * To scroll down to the GitHub Pages section.
 * To select the master branch in the source.
 * To refresh the page and to return to the GitHub Pages section.
-
-The website is published at  [https://dynjashik.github.io/Memory-card-game-MsP-2-Interactive-Frontend-Development-/.](https://dynjashik.github.io/Memory-card-game-MsP-2-Interactive-Frontend-Development-/).
+* The website is published at  [https://dynjashik.github.io/Memory-card-game-MsP-2-Interactive-Frontend-Development-/.](https://dynjashik.github.io/Memory-card-game-MsP-2-Interactive-Frontend-Development-/).
 
 
 ## Bugs
@@ -169,9 +154,7 @@ All content is written by the developer, Darya.
 ### Media
 
 The card dog's images used in this game were obtained from the website [dog.ceo](https://dog.ceo/dog-api/breeds-list) that provides free access to the Dog API (Original dataset taken from the the Stanford Dogs Dataset).
-
 The back side cards is a logo of [the same source](https://dog.ceo/dog-api/breeds-list).
-
 The codes for two dog's animations on Main page and on Final Page are taken from [this source](https://medium.muz.li/inspiring-examples-of-css-animation-2b2a5dd464e0).
 
 ### Acknowledgements

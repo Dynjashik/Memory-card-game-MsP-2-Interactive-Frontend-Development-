@@ -46,8 +46,7 @@ $(".btn-mainmenu").click(function(){
     stopTimer()
 })
 
-/*Flipping game cards*/
-
+/*Flipping game cards, flips amounter*/
 
 $(".card").on('click','.back-side', function() {
     if (amountFlips==0) {
@@ -79,7 +78,8 @@ $(".card").on('click','.back-side', function() {
                 console.log("matchedCards")
                 openedCardCount = 0
                
-/*Open window with the end*/
+/*Openning modal window with game results*/
+
                   var numItems = $('.matched').length
                   if (numItems == amount*2) {
                       console.log("endGame")
@@ -101,8 +101,8 @@ $(".card").on('click','.back-side', function() {
 
 });
 
+/*Timer in the game from the external source: https://dev.to/gspteck/create-a-stopwatch-in-javascript-2mak*/
 
-/*Timer in the game */
 const timer = document.getElementById('timerStart');
 
 var min = 0;
