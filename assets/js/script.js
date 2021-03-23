@@ -14,7 +14,7 @@ $(".btn-level").click(function () {
     $(".game-window").removeClass("d-none");
     $(".game-window").addClass("d-block");
     $("#playWindow").modal("hide");
-    amount = $(this).attr("difficulty");
+    amount = $(this).attr("data-difficulty");
     showCards(amount);
     amountFlips = 0;
     var nameLevel = $(this).text();
