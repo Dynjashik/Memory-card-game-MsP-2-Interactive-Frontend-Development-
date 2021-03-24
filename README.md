@@ -51,7 +51,7 @@ When game is completed the final modal is opened with results.
 
 ### Skeleton
 
-Mockup of the website was created in tool ["Balsamiq Wireframes"](https://github.com/Dynjashik/Memory-card-game-MsP-2-Interactive-Frontend-Development-/blob/4284a30fdc4efadd26a8912213baf665752f828a/assets/images/Balsamiq%20Wireframes.pdf).
+Mockup of the website was created in tool "Balsamiq Wireframes": [for desktops](https://github.com/Dynjashik/Memory-card-game-MsP-2-Interactive-Frontend-Development-/blob/4284a30fdc4efadd26a8912213baf665752f828a/assets/images/Balsamiq%20Wireframes.pdf) and for [mobile devices](https://github.com/Dynjashik/Interactive-Frontend-Development-Milestone-Project-2/blob/master/assets/images/Mockup%20for%20mobile%20devices%20MS2.pdf).
 
 There were made some changes in mockup during creating the game: arrangement of buttons, game cards, the window with results of the game.
 
@@ -61,7 +61,7 @@ The website has a warm funny look with dog's animations in a contrasting juicy c
 ![img](https://github.com/Dynjashik/Memory-card-game-MsP-2-Interactive-Frontend-Development-/blob/4284a30fdc4efadd26a8912213baf665752f828a/assets/images/Color%20Tool.png)
 
 Images for card back side and font side are taken from the website [dog.ceo](https://dog.ceo/dog-api/breeds-list), using their free API.   
-Image for card back side is a logo of the website.
+Image for card back side is a logo of the website.  
 ![img](https://github.com/Dynjashik/Memory-card-game-MsP-2-Interactive-Frontend-Development-/blob/4284a30fdc4efadd26a8912213baf665752f828a/assets/images/dog-logo-black.png)  
 The font is Comic Sans MS that gives a very fun comic feel and is perfect for the easy game.
 

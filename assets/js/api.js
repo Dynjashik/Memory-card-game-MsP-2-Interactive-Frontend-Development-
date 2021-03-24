@@ -13,7 +13,6 @@ function getCards(numOfCardsToFetch, callback) {
     xhr.send();
 }
 
-
 function showCards(numOfCardsToFetch) {
     var el = document.getElementById("cards");
     el.innerHTML = "";
@@ -22,10 +21,10 @@ function showCards(numOfCardsToFetch) {
     getCards(numOfCardsToFetch, function (data) {
         data = data.message;
 
-        var backCard = "<div class = \"back-side card-side\"><img src=\"assets/images/dog-logo-black.png\"></div>";
+        var backCard = '<div class = "back-side card-side"><img src="assets/images/dog-logo-black.png"></div>';
 
         data.forEach(function (item) {
-            var frontCard = "<div class = \"front-side card-side \" ><img src=\"" + item + "\"></div>";
+            var frontCard = '<div class = "front-side card-side " ><img src="' + item + '"></div>';
             imagesArray.push(frontCard);
             imagesArray.push(frontCard);
         });
@@ -33,7 +32,7 @@ function showCards(numOfCardsToFetch) {
         imagesArray = shuffle(imagesArray);
 
         var row = "";
-        for(var i = 0; i < imagesArray.length; i++) {
+        for (var i = 0; i < imagesArray.length; i++) {
             row += backCard + imagesArray[i];
             var row_counter = parseInt(i) + 1;
             if (row_counter % 4 == 0) {
@@ -41,18 +40,18 @@ function showCards(numOfCardsToFetch) {
                 row = "";
             }
         }
-
     });
 }
 
 /* Function Shuffle the cards from external source: https://stackoverflow.com/questions/2450954/how-to-randomize-shuffle-a-javascript-array*/
 
 function shuffle(array) {
-    var currentIndex = array.length, temporaryValue, randomIndex;
+    var currentIndex = array.length,
+        temporaryValue,
+        randomIndex;
 
     // While there remain elements to shuffle...
     while (0 !== currentIndex) {
-
         // Pick a remaining element...
         randomIndex = Math.floor(Math.random() * currentIndex);
         currentIndex -= 1;

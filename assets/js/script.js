@@ -3,7 +3,10 @@ var openedCards = [];
 var amountFlips = 0;
 var amount = 0;
 
-var steps = document.getElementById('steps');
+var steps = document.getElementById("steps");
+
+var wrongGuessTimeout;
+var timerTimeout;
 
 /*Clicking level buttons*/
 
@@ -16,12 +19,14 @@ $(".btn-level").click(function () {
     amount = $(this).attr("data-difficulty");
     showCards(amount);
     amountFlips = 0;
-    var nameLevel = $(this).text();
+    openedCardCount = 0;
     steps.innerHTML = " Steps: " + amountFlips;
-    level.innerHTML = " Level: " + nameLevel;
+    level.innerHTML = " Level: " + $(this).text();
 });
 
 $(".btn-restart").click(function () {
+    clearTimeout(wrongGuessTimeout);
+    clearTimeout(timerTimeout);
     $(".menu-page").removeClass("d-none");
     $(".menu-page").addClass("d-block");
     $(".game-window").removeClass("d-block");
@@ -33,6 +38,8 @@ $(".btn-restart").click(function () {
 });
 
 $(".btn-mainmenu").click(function () {
+    clearTimeout(wrongGuessTimeout);
+    clearTimeout(timerTimeout);
     $(".menu-page").removeClass("d-none");
     $(".menu-page").addClass("d-block");
     $(".game-window").removeClass("d-block");
@@ -44,7 +51,7 @@ $(".btn-mainmenu").click(function () {
 
 /*Flipping game cards, flips amounter*/
 
-$(".card").on('click', '.back-side', function () {
+$(".card").on("click", ".back-side", function () {
     if (amountFlips == 0) {
         startTimer();
     }
@@ -60,10 +67,10 @@ $(".card").on('click', '.back-side', function () {
 
         if (openedCardCount == 2) {
             if (openedCards[0] != openedCards[1]) {
-                setTimeout(function () {
-                    $(".back-side").show();
-                    $(".front-side").not('.matched').hide().removeClass("visible");
+                wrongGuessTimeout = setTimeout(function () {
                     openedCardCount = 0;
+                    $(".back-side").show();
+                    $(".front-side").not(".matched").hide().removeClass("visible");
                 }, 1000);
             } else if (openedCards[0] == openedCards[1]) {
                 $(".visible").addClass("matched");
@@ -72,9 +79,10 @@ $(".card").on('click', '.back-side', function () {
 
                 /*Openning modal window with game results*/
 
-                var numItems = $('.matched').length;
+                var numItems = $(".matched").length;
                 if (numItems == amount * 2) {
                     $("#gameEnd").modal("show");
+                    clearTimeout(timerTimeout);
                     stopTimer();
                 }
                 if (finalMin < 1) {
@@ -83,17 +91,15 @@ $(".card").on('click', '.back-side', function () {
                     timeResult.innerHTML = finalMin + " minutes " + finalSec + " seconds ";
                 }
                 stepsResult.innerHTML = amountFlips + " steps";
-
             }
             openedCards = [];
         }
     }
-
 });
 
 /*Timer in the game from the external source: https://dev.to/gspteck/create-a-stopwatch-in-javascript-2mak*/
 
-const timer = document.getElementById('timerStart');
+const timer = document.getElementById("timerStart");
 
 var min = 0;
 var sec = 0;
@@ -130,14 +136,12 @@ function timerCycle() {
         }
 
         if (sec < 10 || sec == 0) {
-            sec = '0' + sec;
+            sec = "0" + sec;
         }
         if (min < 10 || min == 0) {
-            min = '0' + min;
+            min = "0" + min;
         }
-
-        timer.innerHTML = "Time: " + min + ':' + sec;
-
-        setTimeout("timerCycle()", 1000);
+        timer.innerHTML = "Time: " + min + ":" + sec;
+        timerTimeout = setTimeout("timerCycle()", 1000);
     }
 }
