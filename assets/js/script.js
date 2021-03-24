@@ -8,7 +8,6 @@ var steps = document.getElementById('steps');
 /*Clicking level buttons*/
 
 $(".btn-level").click(function () {
-    console.log("gamewindow");
     $(".menu-page").removeClass("d-block");
     $(".menu-page").addClass("d-none");
     $(".game-window").removeClass("d-none");
@@ -23,7 +22,6 @@ $(".btn-level").click(function () {
 });
 
 $(".btn-restart").click(function () {
-    console.log("restart");
     $(".menu-page").removeClass("d-none");
     $(".menu-page").addClass("d-block");
     $(".game-window").removeClass("d-block");
@@ -35,7 +33,6 @@ $(".btn-restart").click(function () {
 });
 
 $(".btn-mainmenu").click(function () {
-    console.log("mainmenu");
     $(".menu-page").removeClass("d-none");
     $(".menu-page").addClass("d-block");
     $(".game-window").removeClass("d-block");
@@ -61,31 +58,25 @@ $(".card").on('click', '.back-side', function () {
         selectedImageURL = $(this).next(".front-side").find("img").attr("src");
         openedCards.push(selectedImageURL);
 
-        console.log(openedCards, openedCardCount);
-
         if (openedCardCount == 2) {
             if (openedCards[0] != openedCards[1]) {
                 setTimeout(function () {
                     $(".back-side").show();
                     $(".front-side").not('.matched').hide().removeClass("visible");
-                    console.log("COMPARE CARDS");
                     openedCardCount = 0;
                 }, 1000);
             } else if (openedCards[0] == openedCards[1]) {
                 $(".visible").addClass("matched");
                 $(".matched").prev(".back-side").removeClass("back-side");
-                console.log("matchedCards");
                 openedCardCount = 0;
 
                 /*Openning modal window with game results*/
 
                 var numItems = $('.matched').length;
                 if (numItems == amount * 2) {
-                    console.log("endGame");
                     $("#gameEnd").modal("show");
                     stopTimer();
                 }
-                console.log("numItems: " + numItems + "  amount: " + amount);
                 if (finalMin < 1) {
                     timeResult.innerHTML = finalSec + " seconds ";
                 } else {
@@ -132,7 +123,6 @@ function timerCycle() {
         sec = parseInt(sec);
         min = parseInt(min);
         sec = sec + 1;
-        console.log("cycle");
 
         if (sec == 60) {
             min = min + 1;

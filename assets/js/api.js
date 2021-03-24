@@ -15,7 +15,6 @@ function getCards(numOfCardsToFetch, callback) {
 
 
 function showCards(numOfCardsToFetch) {
-    console.log("show cards");
     var el = document.getElementById("cards");
     el.innerHTML = "";
     var imagesArray = [];
@@ -23,10 +22,10 @@ function showCards(numOfCardsToFetch) {
     getCards(numOfCardsToFetch, function (data) {
         data = data.message;
 
-        var backCard = "<div class = \"back-side card-side\"><img src=\"assets/images/dog-logo-black.png\" width=\"150\", height=\"150\"></div>";
+        var backCard = "<div class = \"back-side card-side\"><img src=\"assets/images/dog-logo-black.png\"></div>";
 
         data.forEach(function (item) {
-            var frontCard = "<div class = \"front-side card-side \" ><img src=\"" + item + "\" width=\"150\", height=\"150\"></div>";
+            var frontCard = "<div class = \"front-side card-side \" ><img src=\"" + item + "\"></div>";
             imagesArray.push(frontCard);
             imagesArray.push(frontCard);
         });
