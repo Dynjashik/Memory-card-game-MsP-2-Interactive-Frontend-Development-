@@ -1,10 +1,10 @@
 /*Styling first dog from the source: https://codepen.io/davidkpiano/pen/kkpGWj*/ 
 
  .dog {
-	 width: 100px;
-	 height: 100px;
+	 width: 120px;
+	 height: 120px;
      z-index: 1;
-    margin: 105px auto 25px auto;   
+    margin: 130px auto 35px auto;   
 }
 
  .dog:before {
