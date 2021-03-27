@@ -11,7 +11,7 @@ Live Website: [here.](https://dynjashik.github.io/Memory-card-game-MsP-2-Interac
 
 **[Features](#Features)**
 
-**[Technologies Used](#Technologies_Used)**
+**[Technologies Used](#Technologies Used)**
 
 **[Testing](#Testing)**
 
@@ -71,7 +71,7 @@ The website has a warm funny look with dog animations in a contrasting juicy col
 ![img](https://github.com/Dynjashik/Memory-card-game-MsP-2-Interactive-Frontend-Development-/blob/4284a30fdc4efadd26a8912213baf665752f828a/assets/images/Color%20Tool.png)
 
 Dog images are taken from the website [dog.ceo](https://dog.ceo/dog-api/breeds-list), using their free API. 
-Image for card cover is a logo of [dog.ceo](https://dog.ceo/) website.
+Image for card cover is a logo of [dog.ceo](https://dog.ceo/) website.  
 ![img](https://github.com/Dynjashik/Memory-card-game-MsP-2-Interactive-Frontend-Development-/blob/4284a30fdc4efadd26a8912213baf665752f828a/assets/images/dog-logo-black.png)
 
 The font is Comic Sans MS that gives a fun comic feel and is perfect for a game.
@@ -88,10 +88,10 @@ The website has 2 sections: a Home page and a Game page.
     * About button - allows user to open the third modal with description and inspiration of the game. It has a link where the user can check all image collection.
 
 * Game Page has:
-    * Game area with number of cards depending on difficulty level where the user can play. Cards are real photos of dogs loaded randomly using dgo.ceo API.
+    * Game area with number of cards depending on difficulty level where the user can play. Cards are real photos of dogs loaded randomly using dog.ceo API.
       Game area also displays time spent and number of card flips.
     * Button Restart allows the user to return to the modal popup with difficulty options.
-    * Button Main Menu allows the user to return to Home Page.
+    * Button Quit allows the user to return to Home Page.
     * Final modal popup shows results of the game. It opens when game is finished with Play Again button that acts identically as Restart.
     
 
@@ -120,14 +120,14 @@ Javascript - logic for the game.
 
 ### Tools and Other Resources:
 
-[Github](https://github.com/) -  for version control and pushing content to repository.
-[Gitpod](https://www.gitpod.io/)  -  for building the site.
-[TinyPNG](https://tinypng.com/) - for reducing the size of images.
-[Wfonts](https://www.wfonts.com/font/comic-sans-ms) - for font of the website.
-[COLOR TOOL](https://material.io/resources/color/) - for color palettes and the accessibility of any color combination for UI.
-[Mockup generator](http://techsini.com/multi-mockup/index.php) - for testing responsive website on various devices.
-[W3 Schools](https://www.w3schools.com/) - for HTML, CSS, JS tips.
-[Stackoverflow](stackoverflow.com) - for finding answers on questions.
+[Github](https://github.com/) -  for version control and pushing content to repository.  
+[Gitpod](https://www.gitpod.io/)  -  for building the site.  
+[TinyPNG](https://tinypng.com/) - for reducing the size of images.  
+[Wfonts](https://www.wfonts.com/font/comic-sans-ms) - for font of the website.  
+[COLOR TOOL](https://material.io/resources/color/) - for color palettes and the accessibility of any color combination for UI.  
+[Mockup generator](http://techsini.com/multi-mockup/index.php) - for testing responsive website on various devices.  
+[W3 Schools](https://www.w3schools.com/) - for HTML, CSS, JS tips.  
+[Stackoverflow](stackoverflow.com) - for finding answers on questions.  
 [Jsonformatter](https://jsonformatter.org/scss-to-css) - for transforming SCSS code into CSS code for dog animations.
 
 ### Codes
@@ -139,7 +139,50 @@ Some of the code for the game was taken from the sources:
 
 ## Testing
 
-The following steps were taken to ensure the site was performing as it should:
+The following steps were taken to ensure the website works as intended:
+* Ensure that all user stories are achieved:
+   * Funny dog animations and bright colors make the design enjoyable, simple menu makes navigation intuitive through the game.
+   * New cards every game motivate to play more than one time.
+   * There are clear and short game rules.
+   * There is an information in About section that encourages the user to learn more about Dog API project.
+   * Matching all pairs of identical dog pictures tests user's memory skills in a fun way.
+   * There is an ability to choose between three difficulty levels.
+   * There is a final popup window with game results (time spent and amount of guesses) in order to improve them.
+  
+ * Ensure that all features work well: 
+   * Home page has a header with the name of game, main menu has buttons and dog animation that moves all time. 
+   * Clicking the button "How to Play" opens a pop-up windows with instructions of the game and working link to www.dog.ceo. *Button "OK"* closes pop-up window.
+   * Clicking the button "About" opens a pop-up window with description of the game and working link to www.dog.ceo. *Button "OK"* closes pop-up window.
+   * Clicking the button "Play" opens a pop-up window with three difficulty options as buttons: 
+          * *button "EASY"* opens a game area with 8 cards;
+          * *button "MEDIUM"* opens a game area with 12 cards;
+          * *button "HARD"* opens a game area with 16 cards;
+   * When game area is opened it has rows of faced down cards, 4 cards in each row. There are timer, guess counter and level name.
+   * When user clicks the first card, game begins and countdown timer starts.
+   * The flip counter increases by one with each card turned over.
+   * All game cards on the game area are face down. When user clicks on card, it flips face up. When user opens 2 cards with different pictures they turn over face down. If user matches the cards they remain face up. The game continues until all cards are revealed (matched). The user can select only 2 cards at a time.
+   * The game area has 2 buttons:
+         * *Button "RESTART"* redirects the user to the modal with difficulty options when clicked, game area is closed;  
+         * *Button "QUIT"* redirects the user to the home page when clicked, game area is closed;
+   * When all cards are matched a pop-up window with results of game opens. The results appear as text with amount time and amount of flips. There is a dog animation below the text that moves all time.
+   * A pop-up window with game results has *button "PLAY AGAIN"* that works the same as *button "RESTART"* - redirects the user to the window with difficulty options to begin a new game.
+
+The following online validators have been used for checking the code for any errors or warnings:
+* W3C HTML Validator;  
+There are no warnings or errors:  
+![img](https://validator.w3.org/nu/?doc=https%3A%2F%2Fdynjashik.github.io%2FMemory-card-game-MsP-2-Interactive-Frontend-Development-%2F)
+
+* [W3C CSS Validator](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fdynjashik.github.io%2FMemory-card-game-MsP-2-Interactive-Frontend-Development-%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en#errors);  
+There are 19 errors and warnings connected to external libraries (Bootstrap, Awesome, hover.css) that I cannot correct.
+
+* JShint looks good:  
+![img]()
+
+Lighthouse testing in Chrome browser developer tools:  
+![img](https://github.com/Dynjashik/Memory-card-game-MsP-2-Interactive-Frontend-Development-/blob/c1df94860c68215d93588bdf338915a0c877e3de/assets/images/LightHouse%20desktop.png)
+
+The site was tested across different browsers and screen sized: Chrome, Internet Explorer, Safari, Firefox, UC Browser, Opera and Samsung Internet. It was also tested on mobile devices such as: iPhone Xs, iPhone 7, iPhone 11, Xiaomi Redmi Note 9. 
+
 
 ## Deployment
 
@@ -165,7 +208,7 @@ All content is written by the developer Darya Belarusik.
 ### Media
 
 Dog images used in this game were obtained from the website [dog.ceo](https://dog.ceo/dog-api/breeds-list) that provides free access to the Dog API (Original dataset taken from the the Stanford Dogs Dataset).
-A card cover is a logo of [the same source](https://dog.ceo/dog-api/breeds-list).
+A card cover is a logo of [the same source](https://dog.ceo/dog-api/breeds-list).  
 The codes for two dog animations on Main page and on Final Page are taken from [this source](https://medium.muz.li/inspiring-examples-of-css-animation-2b2a5dd464e0).
 
 ### Acknowledgements
