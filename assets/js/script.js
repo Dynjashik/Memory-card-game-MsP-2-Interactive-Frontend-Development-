@@ -51,7 +51,7 @@ $(".btn-mainmenu").click(function () {
 
 /*Flipping game cards, flips amounter*/
 
-$(".card").on("click", ".back-side", function () {
+$("#cards").on("click", ".back-side", function () {
     if (amountFlips == 0) {
         startTimer();
     }
