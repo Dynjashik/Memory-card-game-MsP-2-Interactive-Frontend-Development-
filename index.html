@@ -2,7 +2,8 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="viewport" name="description" content="width=device-width, initial-scale=1.0"/>
+        <meta name="description" content="A card memory game with dog's images using API for the matching a pair">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.1.1/css/hover-min.css" type="text/css" />
         <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
@@ -85,7 +86,7 @@
                                 Remember, you may flip only 2 cards at a time. If it is a match, they will remain face up. Otherwise you will need to find matching cards around all available ones.<br />
                                 You can restart the game anytime. <br />
                                 New game - new pictures. <br />
-                                Click <a href="https://dog.ceo/dog-api/breeds-list" class="tooltip-test" title="BREEDS LIST" target="_blank">Dog API</a> to learn more about the different dog’s breeds. <br />
+                                Click <a href="https://dog.ceo/dog-api/breeds-list" class="tooltip-test" title="BREEDS LIST" rel="noopener" target="_blank">Dog API</a> to learn more about the different dog’s breeds. <br />
                             </div>
                             Good Luck! <i class="fas fa-paw"></i>
                         </div>
@@ -98,7 +99,7 @@
 
             <!--ABOUT BUTTON-->
 
-            <div class="modal fade" id="aboutWindow" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-hidden="true">
+            <div class="modal fade" id="aboutWindow" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="aboutWindowTitle" aria-hidden="true">
                 <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
                     <div class="modal-content">
                         <div class="modal-header">
@@ -113,7 +114,7 @@
                                 Welcome to a memory matching game <strong> Match a dog</strong>.<br />
                                 <br />
                                 This game has a massive collection of images taken from the Stanford Dogs Dataset. <br />
-                                Follow <a href="https://dog.ceo/dog-api/about" class="tooltip-test" title="Dog API" target="_blank">dog.ceo</a> where you can learn more about the project that inspired this game. There you can also add your
+                                Follow <a href="https://dog.ceo/dog-api/about" class="tooltip-test" title="Dog API" rel="noopener" target="_blank">dog.ceo</a> where you can learn more about the project that inspired this game. There you can also add your
                                 own dog photo to the collection and support the project. In return you can receive a gift for your pet (or small child). <br />
                                 <br />
                             </div>
@@ -129,7 +130,7 @@
 
         <!--PLAY BUTTON-->
 
-        <div class="modal fade" id="playWindow" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-hidden="true">
+        <div class="modal fade" id="playWindow" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="playWindowTitle" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered modal-sm modal-dialog-scrollable">
                 <div class="modal-content">
                     <div class="modal-header">
@@ -156,14 +157,14 @@
                 </p>
             </div>
             <div class="container-fluid card-area">
-                <div class="justify-content-center d-inline-block card" id="cards">CARDS</div>
+                <div class="justify-content-center d-inline-block" id="cards"></div>
             </div>
             <button type="button" class="btn-restart">RESTART</button>
             <button type="button" class="btn-mainmenu">QUIT</button>
         </div>
 
         <!--MODAL WITH RESULTS OF THE GAME-->
-        <div class="modal fade" id="gameEnd" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-hidden="true">
+        <div class="modal fade" id="gameEnd" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="gameEndTitle" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered">
                 <div class="modal-content">
                     <div class="modal-header">
@@ -205,7 +206,7 @@
                         </div>
                     </div>
                     <div class="modal-footer btn-center">
-                        <button type="button" class="btn btn-mainmenu btn-secondary">PLAY AGAIN</button>
+                        <button type="button" class="btn btn-restart btn-secondary">PLAY AGAIN</button>
                     </div>
                 </div>
             </div>
