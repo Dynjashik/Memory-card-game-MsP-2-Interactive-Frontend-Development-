@@ -11,7 +11,7 @@ Live Website: [here.](https://dynjashik.github.io/Memory-card-game-MsP-2-Interac
 
 **[Features](#Features)**
 
-**[Technologies Used](#Technologies_Used)**
+**[Technologies Used](#Technologies)**
 
 **[Testing](#Testing)**
 
