@@ -153,17 +153,17 @@ The following steps were taken to ensure the website works as intended:
    * Home page has a header with the name of game, main menu has buttons and dog animation that moves all time. 
    * Clicking the button "How to Play" opens a pop-up windows with instructions of the game and working link to www.dog.ceo. *Button "OK"* closes pop-up window.
    * Clicking the button "About" opens a pop-up window with description of the game and working link to www.dog.ceo. *Button "OK"* closes pop-up window.
-   * Clicking the button "Play" opens a pop-up window with three difficulty options as buttons: 
-          * *button "EASY"* opens a game area with 8 cards;
-          * *button "MEDIUM"* opens a game area with 12 cards;
-          * *button "HARD"* opens a game area with 16 cards;
+   * Clicking the button "Play" opens a pop-up window with three difficulty options as buttons:  
+       * *"EASY"* button opens a game area with 8 cards;
+       * *"MEDIUM"* button opens a game area with 12 cards;
+       * *"HARD"* button opens a game area with 16 cards;
    * When game area is opened it has rows of faced down cards, 4 cards in each row. There are timer, guess counter and level name.
    * When user clicks the first card, game begins and countdown timer starts.
    * The flip counter increases by one with each card turned over.
    * All game cards on the game area are face down. When user clicks on card, it flips face up. When user opens 2 cards with different pictures they turn over face down. If user matches the cards they remain face up. The game continues until all cards are revealed (matched). The user can select only 2 cards at a time.
    * The game area has 2 buttons:
-         * *Button "RESTART"* redirects the user to the modal with difficulty options when clicked, game area is closed;  
-         * *Button "QUIT"* redirects the user to the home page when clicked, game area is closed;
+       * *"RESTART"* button redirects the user to the modal with difficulty options when clicked, game area is closed;  
+       * *"QUIT"* button redirects the user to the home page when clicked, game area is closed;
    * When all cards are matched a pop-up window with results of game opens. The results appear as text with amount time and amount of flips. There is a dog animation below the text that moves all time.
    * A pop-up window with game results has *button "PLAY AGAIN"* that works the same as *button "RESTART"* - redirects the user to the window with difficulty options to begin a new game.
 
