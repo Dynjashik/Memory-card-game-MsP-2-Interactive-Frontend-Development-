@@ -11,7 +11,7 @@ Live Website: [here.](https://dynjashik.github.io/Memory-card-game-MsP-2-Interac
 
 **[Features](#Features)**
 
-**[Technologies Used](#Technologies)**
+**[Technologies](#Technologies)**
 
 **[Testing](#Testing)**
 
@@ -102,7 +102,7 @@ The website has 2 sections: a Home page and a Game page.
 
 On mobile devices all modals and windows are the same.
 
-## Technologies Used
+## Technologies
 
 ### Languages used:
 
