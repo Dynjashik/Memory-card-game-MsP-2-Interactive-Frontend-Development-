@@ -55,8 +55,7 @@ Features that should be in the project:
 ### Structure
 
 The game is a single page site with several modals that act as popup windows or menus.
-It uses two main <div> elements to separate between main menu area and game area. They become hidden or visible based on certain navigation buttons clicked. 
-
+It uses two main <div> elements to separate between main menu area and game area. They become hidden or visible based on certain navigation buttons clicked.  
 At first user enters main menu where he/she can start a game with different difficulty levels, read information about an API or read game rules.
 After user matched all pairs of cards the modal with final results appears.
 
@@ -118,7 +117,7 @@ Javascript - logic for the game.
 [Balsamiq](https://balsamiq.com/) - for creating a mockup.  
 [Dog API](https://dog.ceo/dog-api/about) - for dog pictures.  
 
-### Tools and Other Resources:
+### Tools and Other Resources used:
 
 [Github](https://github.com/) -  for version control and pushing content to repository.  
 [Gitpod](https://www.gitpod.io/)  -  for building the site.  
@@ -128,9 +127,10 @@ Javascript - logic for the game.
 [Mockup generator](http://techsini.com/multi-mockup/index.php) - for testing responsive website on various devices.  
 [W3 Schools](https://www.w3schools.com/) - for HTML, CSS, JS tips.  
 [Stackoverflow](stackoverflow.com) - for finding answers on questions.  
-[Jsonformatter](https://jsonformatter.org/scss-to-css) - for transforming SCSS code into CSS code for dog animations.
+[Jsonformatter](https://jsonformatter.org/scss-to-css) - for transforming SCSS code into CSS code for dog animations.  
+[Webformatter](https://webformatter.com/html) - for beautifying HTML, CSS, Javascript codes.
 
-### Codes
+### Codes used:
 
 Some of the code for the game was taken from the sources:
 *  [Stackoverflow](https://stackoverflow.com/questions/2450954/how-to-randomize-shuffle-a-javascript-array) - for shuffling game cards.
@@ -150,9 +150,9 @@ The following steps were taken to ensure the website works as intended:
    * There is a final popup window with game results (time spent and amount of guesses) in order to improve them.
   
  * Ensure that all features work well: 
-   * Home page has a header with the name of game, main menu has buttons and dog animation that moves all time. 
-   * Clicking the button "How to Play" opens a pop-up windows with instructions of the game and working link to www.dog.ceo. *Button "OK"* closes pop-up window.
-   * Clicking the button "About" opens a pop-up window with description of the game and working link to www.dog.ceo. *Button "OK"* closes pop-up window.
+   * Home page has a central and responsive header with the name of game, main menu has buttons and dog animation that moves all time. 
+   * Clicking the button "How to Play" opens a pop-up windows with instructions of the game and working link to www.dog.ceo. Button "OK" closes pop-up window.
+   * Clicking the button "About" opens a pop-up window with description of the game and working link to www.dog.ceo. Button "OK" closes pop-up window.
    * Clicking the button "Play" opens a pop-up window with three difficulty options as buttons:  
        * *"EASY"* button opens a game area with 8 cards;
        * *"MEDIUM"* button opens a game area with 12 cards;
@@ -173,15 +173,19 @@ There are no warnings or errors:
 ![img](https://validator.w3.org/nu/?doc=https%3A%2F%2Fdynjashik.github.io%2FMemory-card-game-MsP-2-Interactive-Frontend-Development-%2F)
 
 * [W3C CSS Validator](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fdynjashik.github.io%2FMemory-card-game-MsP-2-Interactive-Frontend-Development-%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en#errors);  
-There are 19 errors and warnings connected to external libraries (Bootstrap, Awesome, hover.css) that I cannot correct.
+There are 17 errors and warnings connected to external libraries (Bootstrap, Awesome, hover.css) that I cannot correct.
 
 * JShint looks good:  
 ![img]()
 
-Lighthouse testing in Chrome browser developer tools:  
+Lighthouse testing was made in Chrome browser developer tools. 
+* Desktop Lighthouse Improved Report:  
 ![img](https://github.com/Dynjashik/Memory-card-game-MsP-2-Interactive-Frontend-Development-/blob/c1df94860c68215d93588bdf338915a0c877e3de/assets/images/LightHouse%20desktop.png)
 
-The site was tested across different browsers and screen sized: Chrome, Internet Explorer, Safari, Firefox, UC Browser, Opera and Samsung Internet. It was also tested on mobile devices such as: iPhone Xs, iPhone 7, iPhone 11, Xiaomi Redmi Note 9. 
+* Mobile Lighthouse Report:  
+![img](https://github.com/Dynjashik/Memory-card-game-MsP-2-Interactive-Frontend-Development-/blob/510f4cda821ce008763c3cc65e7bac666a0763d9/assets/images/Lighthouse%20mobile.png)
+
+The site was tested across different browsers and screen sized to be sure in responsiveness and browser compatibility.: Chrome, Internet Explorer, Safari, Firefox, UC Browser, Opera and Samsung Internet. It was also tested on mobile devices such as: iPhone Xs, iPhone 7, iPhone 11, Xiaomi Redmi Note 9. 
 
 
 ## Deployment
@@ -197,13 +201,21 @@ Steps for deploying the website to a hosting platform GitHub Pages:
 
 ## Bugs
 
-the row of the cards in responsive website
+During testing the game on mobile devices a bug was discovered. There is a little space (several pixels) between the header and the right side of the screen despite a navbar (bootstrap library) being used for responsive and fluid header. To solve the problem there was an additional style media for each screen size made.
+Same was made for game cards to keep the same card number in a row on the mobile version.
+
+Another bug is connected with game cards turning over. If you turn over two cards and quickly click “QUIT” or “RESTART” button a new game opens. But you can’t select any card because there are still two face up cards from the last game. According to the rules of the game, only 2 cards can be selected at a time. 
+The problem was in the function setTimeOut() that resets the flip counter in 1 second. If you quit the game faster the flip counter wouldnt't have time to reset. The solution of the bug was to reset the counter when the button with the game's level is clicked.
+
+During testing the game in online community “Slack” the bug was discovered that game card images are being stretched. One of the users recommended me to use object-fit: cover; under the img css properties to fix it.
+
+During testing the game on iPhone 6 the bug was discovered that the header content is not centered. There was an additional margin on the right side. The bug esd solved by changin margin property to margin: auto; 
 
 ## Credits
 
 ### Contents
 
-All content is written by the developer Darya Belarusik.
+All content is written by developer Darya Belarusik.
 
 ### Media
 
@@ -214,3 +226,5 @@ The codes for two dog animations on Main page and on Final Page are taken from [
 ### Acknowledgements
 
 Inspiration for this project was received from:
+* Other code institute students' projects.
+* Help of the mentor and my husband.
