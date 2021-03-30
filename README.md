@@ -168,21 +168,21 @@ The following steps were taken to ensure the website works as intended:
    * A pop-up window with game results has *button "PLAY AGAIN"* that works the same as *button "RESTART"* - redirects the user to the window with difficulty options to begin a new game.
 
 The following online validators have been used for checking the code for any errors or warnings:
-* W3C HTML Validator;  
-There are no warnings or errors: [link](https://validator.w3.org/nu/?doc=https%3A%2F%2Fdynjashik.github.io%2FMemory-card-game-MsP-2-Interactive-Frontend-Development-%2F)
+* [W3C HTML Validator](https://validator.w3.org/nu/?doc=https%3A%2F%2Fdynjashik.github.io%2FMemory-card-game-MsP-2-Interactive-Frontend-Development-%2F);  
+There are no warnings or errors.
 
 * [W3C CSS Validator](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fdynjashik.github.io%2FMemory-card-game-MsP-2-Interactive-Frontend-Development-%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en#errors);  
 There are 17 errors and warnings connected to external libraries (Bootstrap, Awesome, hover.css) that I cannot correct.
 
 * JShint looks good:  
-![img](https://github.com/Dynjashik/Interactive-Frontend-Development-Milestone-Project-2/blob/c3842f483c8bc96fe45bc94db87c22897596b361/assets/images/Jshint.png)
+![img](https://github.com/Dynjashik/Interactive-Frontend-Development-Milestone-Project-2/blob/669f9d7ed7ac3c64661d28a3bfc86b41ac2b7a2d/assets/images/Jshint.png)
 
 Lighthouse testing was made in Chrome browser developer tools. 
 * Desktop Lighthouse Improved Report:  
 ![img](https://github.com/Dynjashik/Interactive-Frontend-Development-Milestone-Project-2/blob/c3842f483c8bc96fe45bc94db87c22897596b361/assets/images/LightHouse%20desktop.png)
 
 * Mobile Lighthouse Report:  
-![img](https://github.com/Dynjashik/Interactive-Frontend-Development-Milestone-Project-2/blob/c3842f483c8bc96fe45bc94db87c22897596b361/assets/images/Lighthouse%20mobile.png)
+![img](https://github.com/Dynjashik/Interactive-Frontend-Development-Milestone-Project-2/blob/669f9d7ed7ac3c64661d28a3bfc86b41ac2b7a2d/assets/images/Lighthouse%20mobile.png)
 
 The site was tested across different browsers and screen sized to be sure in responsiveness and browser compatibility.: Chrome, Internet Explorer, Safari, Firefox, UC Browser, Opera and Samsung Internet. It was also tested on mobile devices such as: iPhone Xs, iPhone 7, iPhone 11, Xiaomi Redmi Note 9. 
 
