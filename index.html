@@ -2,15 +2,14 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8" />
-        <meta name="viewport" name="description" content="width=device-width, initial-scale=1.0"/>
-        <meta name="description" content="A card memory game with dog's images using API for the matching a pair">
+        <meta name="viewport" name="description" content="width=device-width, initial-scale=1.0" />
+        <meta name="description" content="A card memory game with dog's images using API for the matching a pair" />
+        <title>Match a dog</title>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.1.1/css/hover-min.css" type="text/css" />
         <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
         <link rel="stylesheet" href="assets/css/style.css" />
         <link rel="stylesheet" href="assets/css/dogs-animation.css" />
-
-        <title>Memory card game</title>
     </head>
 
     <body>
@@ -59,10 +58,27 @@
             </div>
 
             <!--Button trigger modal windows (codes for modals, buttons, badges are taken from bootstrap)-->
-
+            <div><button type="button" class="btn btn-primary btn-play" data-bs-toggle="modal" data-bs-target="#playWindow">Play</button></div>
             <div><button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#descriptionWindow">How to play</button></div>
             <div><button type="button" class="btn btn-primary btn-about" data-bs-toggle="modal" data-bs-target="#aboutWindow">About</button></div>
-            <div><button type="button" class="btn btn-primary btn-play" data-bs-toggle="modal" data-bs-target="#playWindow">Play</button></div>
+
+            <!--PLAY BUTTON-->
+
+            <div class="modal fade" id="playWindow" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="playWindowTitle" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-sm modal-dialog-scrollable">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <h2>Game difficulty:</h2>
+                            <button type="button" id="btn-easy" class="btn-level" data-difficulty="4">EASY</button>
+                            <button type="button" id="btn-medium" class="btn-level" data-difficulty="6">MEDIUM</button>
+                            <button type="button" id="btn-hard" class="btn-level" data-difficulty="8">HARD</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
             <!-- HOW TO PLAY BUTTON-->
 
@@ -114,8 +130,8 @@
                                 Welcome to a memory matching game <strong> Match a dog</strong>.<br />
                                 <br />
                                 This game has a massive collection of images taken from the Stanford Dogs Dataset. <br />
-                                Follow <a href="https://dog.ceo/dog-api/about" class="tooltip-test" title="Dog API" rel="noopener" target="_blank">dog.ceo</a> where you can learn more about the project that inspired this game. There you can also add your
-                                own dog photo to the collection and support the project. In return you can receive a gift for your pet (or small child). <br />
+                                Follow <a href="https://dog.ceo/dog-api/about" class="tooltip-test" title="Dog API" rel="noopener" target="_blank">dog.ceo</a> where you can learn more about the project that inspired this game. There you can
+                                also add your own dog photo to the collection and support the project. In return you can receive a gift for your pet (or small child). <br />
                                 <br />
                             </div>
                             Enjoy your play time! <i class="fas fa-paw"></i>
@@ -123,24 +139,6 @@
                         <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">OK</button>
                         </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!--PLAY BUTTON-->
-
-        <div class="modal fade" id="playWindow" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="playWindowTitle" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered modal-sm modal-dialog-scrollable">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                        <h2>Game difficulty:</h2>
-                        <button type="button" id="btn-easy" class="btn-level" data-difficulty="4">EASY</button>
-                        <button type="button" id="btn-medium" class="btn-level" data-difficulty="6">MEDIUM</button>
-                        <button type="button" id="btn-hard" class="btn-level" data-difficulty="8">HARD</button>
                     </div>
                 </div>
             </div>

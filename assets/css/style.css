@@ -29,7 +29,7 @@ body {
 .btn-primary {
     margin: 5px;
     padding: 0.375rem 1rem;
-    font-size: 2rem;
+    font-size: 1.5rem;
     border-radius: 1.25rem;
     background-color: #6e64f0;
     border-color: transparent;
@@ -37,12 +37,12 @@ body {
 
 .btn-play {
     margin: 5px;
-    padding: 1rem 2.5rem;
-    font-size: 2.5rem;
+    padding: 1rem 2rem;
+    font-size: 2rem;
 }
 
 .btn-about {
-    padding: 0.375rem 2.5rem;
+    padding: 0.375rem 1.5rem;
 }
 
 .btn-primary:hover,
@@ -54,7 +54,7 @@ body {
 
 .modal-content {
     border-radius: 1.3rem;
-    background-color: white;
+    background-color: #ffff9f;
 }
 
 h5 {
